@@ -19,12 +19,22 @@ namespace Billing_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnMax.PerformClick();
+            //btnMax.PerformClick();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
