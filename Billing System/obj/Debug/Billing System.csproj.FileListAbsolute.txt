@@ -12,3 +12,17 @@ C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.07\Billing-Systems-\Billi
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.07\Billing-Systems-\Billing System\Billing System\obj\Debug\Billing System.pdb
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.07\Billing-Systems-\Billing System\Billing System\obj\Debug\Billing_System.frmLogin.resources
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.07\Billing-Systems-\Billing System\Billing System\obj\Debug\Billing_System.frmMain.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Billing System.exe.config
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Billing System.exe
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Billing System.pdb
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Guna.UI2.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLogin.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmMain.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.Properties.Resources.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.Sample.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb

@@ -19,7 +19,12 @@ namespace Billing_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            btnMax.PerformClick();
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
