@@ -31,5 +31,15 @@ namespace Billing_System
         {
             Application.Exit();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //show the frmMain form
+            frmMain main = new frmMain();
+            main.Show();
+            this.Hide();
+
+
+        }
     }
 }
