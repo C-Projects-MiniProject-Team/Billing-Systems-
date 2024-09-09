@@ -420,7 +420,7 @@
             this.btnAdd.Animated = true;
             this.btnAdd.AutoRoundedCorners = true;
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BorderRadius = 15;
+            this.btnAdd.BorderRadius = 22;
             this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -458,7 +458,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(253, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1049, 43);
+            this.guna2Panel2.Size = new System.Drawing.Size(1049, 78);
             this.guna2Panel2.TabIndex = 1;
             // 
             // btnMim
@@ -498,9 +498,9 @@
             // 
             // CentralPannel
             // 
-            this.CentralPannel.Location = new System.Drawing.Point(259, 49);
+            this.CentralPannel.Location = new System.Drawing.Point(259, 84);
             this.CentralPannel.Name = "CentralPannel";
-            this.CentralPannel.Size = new System.Drawing.Size(1031, 844);
+            this.CentralPannel.Size = new System.Drawing.Size(1031, 809);
             this.CentralPannel.TabIndex = 2;
             // 
             // addNewPanel

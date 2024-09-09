@@ -35,6 +35,7 @@
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.loadingPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.loadingPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.loadingPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             this.label1.AccessibleName = "LoadingData";
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-1, 296);
+            this.label1.Location = new System.Drawing.Point(3, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 4;
@@ -92,12 +93,24 @@
             this.loadingPanel1.Size = new System.Drawing.Size(616, 17);
             this.loadingPanel1.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AccessibleName = "LoadingPresentage";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(573, 300);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "100%";
+            // 
             // frmLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(617, 338);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.loadingPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
@@ -119,6 +132,7 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
         private Guna.UI2.WinForms.Guna2GradientPanel loadingPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel loadingPanel2;
+        private System.Windows.Forms.Label label2;
     }
 
 
