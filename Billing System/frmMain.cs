@@ -19,7 +19,7 @@ namespace Billing_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //btnMax.PerformClick();
+            btnMax.PerformClick();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -35,6 +35,18 @@ namespace Billing_System
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addNewPanel.Visible = true;
+
+
+        }
+
+        private void addNewPanel_MouseEnter(object sender, EventArgs e)
+        {
+            addNewPanel.Visible = false;
         }
     }
 }

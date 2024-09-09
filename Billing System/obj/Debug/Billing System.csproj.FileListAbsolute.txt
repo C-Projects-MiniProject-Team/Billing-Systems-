@@ -26,3 +26,29 @@ C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billi
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLoading.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Bunifu.Licensing.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\RestSharp.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Buffers.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Memory.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.dll
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\RestSharp.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Buffers.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Memory.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.xml
