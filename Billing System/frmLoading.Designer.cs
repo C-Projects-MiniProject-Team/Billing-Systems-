@@ -71,6 +71,7 @@
             this.guna2BorderlessForm2.BorderRadius = 5;
             this.guna2BorderlessForm2.ContainerControl = this;
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm2.ShadowColor = System.Drawing.Color.DarkViolet;
             this.guna2BorderlessForm2.TransparentWhileDrag = true;
             // 
             // loadingPanel2
