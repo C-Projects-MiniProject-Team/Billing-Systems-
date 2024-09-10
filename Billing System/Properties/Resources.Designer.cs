@@ -123,6 +123,16 @@ namespace Billing_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homr {
+            get {
+                object obj = ResourceManager.GetObject("homr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logomain {
             get {
                 object obj = ResourceManager.GetObject("logomain", resourceCulture);
