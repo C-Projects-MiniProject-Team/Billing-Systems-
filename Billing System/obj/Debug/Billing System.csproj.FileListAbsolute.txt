@@ -52,3 +52,9 @@ C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billi
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.xml
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.xml
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleAdd.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing System.exe.config
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleView.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmUser.resources
+C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.09.08\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmUserAdd.resources

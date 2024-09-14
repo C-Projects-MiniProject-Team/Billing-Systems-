@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Billing_System.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Billing_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnMax.PerformClick();
+           
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -47,6 +49,36 @@ namespace Billing_System
         private void addNewPanel_MouseEnter(object sender, EventArgs e)
         {
             addNewPanel.Visible = false;
+        }
+
+        private void userRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddControls(Form F)
+        {
+            CentralPannel.Controls.Clear();
+            F.TopLevel = false;
+            F.Dock = DockStyle.Fill;
+            CentralPannel.Controls.Add(F);
+            F.Show();
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmUser());
         }
     }
 }
