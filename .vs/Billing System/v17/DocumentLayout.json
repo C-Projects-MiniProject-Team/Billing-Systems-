@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.08\\billing-systems-\\billing system\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.08\\billing-systems-\\billing system\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.08\\billing-systems-\\billing system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.08\\billing-systems-\\billing system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,11 +26,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Billing System\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Billing System\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T07:25:59.979Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\Program.cs",
+              "RelativeDocumentMoniker": "Billing System\\Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\Program.cs",
+              "RelativeToolTip": "Billing System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T07:14:22.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SampleAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\SampleAdd.cs",
+              "RelativeDocumentMoniker": "Billing System\\SampleAdd.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\SampleAdd.cs [Design]",
+              "RelativeToolTip": "Billing System\\SampleAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T06:04:09.426Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.08\\Billing-Systems-\\Billing System\\frmMain.cs",
               "RelativeDocumentMoniker": "Billing System\\frmMain.cs",

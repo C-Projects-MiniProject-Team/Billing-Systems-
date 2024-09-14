@@ -59,5 +59,15 @@ namespace Billing_System
         {
 
         }
+
+        private void AddControls(Form F)
+        {
+            CentralPannel.Controls.Clear();
+            F.TopLevel = false;
+            F.Dock = DockStyle.Fill;
+            CentralPannel.Controls.Add(F);
+            F.Show();
+
+        }
     }
 }

@@ -245,15 +245,17 @@
             this.btnCloseLogin.FillColor = System.Drawing.Color.Transparent;
             this.btnCloseLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseLogin.ForeColor = System.Drawing.Color.White;
-            this.btnCloseLogin.Location = new System.Drawing.Point(807, 26);
+            this.btnCloseLogin.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.btnCloseLogin.Location = new System.Drawing.Point(807, 27);
             this.btnCloseLogin.Name = "btnCloseLogin";
-            this.btnCloseLogin.Size = new System.Drawing.Size(63, 33);
+            this.btnCloseLogin.Size = new System.Drawing.Size(63, 36);
             this.btnCloseLogin.TabIndex = 3;
             this.btnCloseLogin.Text = "Exit";
             this.btnCloseLogin.Click += new System.EventHandler(this.btnLoginClose_Click);
             // 
             // guna2BorderlessForm2
             // 
+            this.guna2BorderlessForm2.AnimateWindow = true;
             this.guna2BorderlessForm2.BorderRadius = 20;
             this.guna2BorderlessForm2.ContainerControl = this;
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
