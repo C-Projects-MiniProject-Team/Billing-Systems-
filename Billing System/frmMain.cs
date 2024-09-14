@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Billing_System.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,6 +69,16 @@ namespace Billing_System
             CentralPannel.Controls.Add(F);
             F.Show();
 
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmUser());
         }
     }
 }

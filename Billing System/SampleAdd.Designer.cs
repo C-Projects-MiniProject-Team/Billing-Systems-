@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -41,14 +41,14 @@
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.HasFormShadow = true;
             this.guna2BorderlessForm1.ShadowColor = System.Drawing.Color.DarkViolet;
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BorderRadius = 12;
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.DarkViolet;
+            this.guna2CustomGradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DarkViolet;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
@@ -57,22 +57,7 @@
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(800, 119);
-            this.guna2CustomGradientPanel1.TabIndex = 0;
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.Controls.Add(this.btnDelete);
-            this.guna2CustomGradientPanel2.Controls.Add(this.btnClose);
-            this.guna2CustomGradientPanel2.Controls.Add(this.btnSave);
-            this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.DarkViolet;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 339);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(800, 111);
-            this.guna2CustomGradientPanel2.TabIndex = 1;
+            this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -84,6 +69,23 @@
             this.label1.Size = new System.Drawing.Size(198, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sample Header";
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnDelete);
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnClose);
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnSave);
+            this.guna2CustomGradientPanel2.CustomBorderColor = System.Drawing.Color.DarkViolet;
+            this.guna2CustomGradientPanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.DarkViolet;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 339);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(800, 111);
+            this.guna2CustomGradientPanel2.TabIndex = 2;
             // 
             // btnDelete
             // 
@@ -102,6 +104,7 @@
             this.btnDelete.FillColor2 = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
             this.btnDelete.Image = global::Billing_System.Properties.Resources.bin;
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
             this.btnDelete.Location = new System.Drawing.Point(714, 39);
@@ -127,6 +130,7 @@
             this.btnClose.FillColor2 = System.Drawing.Color.MediumOrchid;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
             this.btnClose.Image = global::Billing_System.Properties.Resources.close;
             this.btnClose.ImageOffset = new System.Drawing.Point(-3, 2);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
@@ -154,6 +158,7 @@
             this.btnSave.FillColor2 = System.Drawing.Color.MediumOrchid;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
             this.btnSave.Image = global::Billing_System.Properties.Resources.save_file;
             this.btnSave.ImageOffset = new System.Drawing.Point(-3, 2);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
@@ -182,12 +187,11 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         public System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
-        private Guna.UI2.WinForms.Guna2GradientButton btnClose;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
+        public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSave;
+        public Guna.UI2.WinForms.Guna2GradientButton btnClose;
+        public Guna.UI2.WinForms.Guna2GradientButton btnDelete;
     }
 }

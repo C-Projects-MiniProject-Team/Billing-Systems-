@@ -68,7 +68,6 @@
             // 
             // guna2BorderlessForm2
             // 
-            this.guna2BorderlessForm2.BorderRadius = 5;
             this.guna2BorderlessForm2.ContainerControl = this;
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm2.ShadowColor = System.Drawing.Color.DarkViolet;
@@ -80,18 +79,18 @@
             this.loadingPanel2.BorderRadius = 3;
             this.loadingPanel2.FillColor = System.Drawing.Color.DarkViolet;
             this.loadingPanel2.FillColor2 = System.Drawing.Color.Fuchsia;
-            this.loadingPanel2.Location = new System.Drawing.Point(0, -13);
+            this.loadingPanel2.Location = new System.Drawing.Point(-2, 0);
             this.loadingPanel2.Name = "loadingPanel2";
-            this.loadingPanel2.Size = new System.Drawing.Size(10, 26);
+            this.loadingPanel2.Size = new System.Drawing.Size(10, 10);
             this.loadingPanel2.TabIndex = 2;
             // 
             // loadingPanel1
             // 
             this.loadingPanel1.BorderRadius = 3;
             this.loadingPanel1.Controls.Add(this.loadingPanel2);
-            this.loadingPanel1.Location = new System.Drawing.Point(1, 321);
+            this.loadingPanel1.Location = new System.Drawing.Point(1, 326);
             this.loadingPanel1.Name = "loadingPanel1";
-            this.loadingPanel1.Size = new System.Drawing.Size(616, 17);
+            this.loadingPanel1.Size = new System.Drawing.Size(616, 10);
             this.loadingPanel1.TabIndex = 3;
             // 
             // label2

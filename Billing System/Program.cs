@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Billing_System.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Billing_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SampleAdd());
+            Application.Run(new frmMain());
         }
     }
 }

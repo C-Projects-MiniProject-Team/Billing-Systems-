@@ -39,10 +39,10 @@
             this.enterBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCloseLogin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
-            this.guna2Panel1.BorderRadius = 19;
+            this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.Controls.Add(this.InvalidPd);
             this.guna2Panel1.Controls.Add(this.InvlidN);
             this.guna2Panel1.Controls.Add(this.btnLogin);
@@ -60,6 +60,8 @@
             this.guna2Panel1.Controls.Add(this.enterBoxName);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(424, 549);
@@ -103,10 +105,11 @@
             this.btnLogin.FillColor2 = System.Drawing.Color.MediumOrchid;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
             this.btnLogin.Location = new System.Drawing.Point(65, 431);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(284, 58);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseTransparentBackground = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -131,7 +134,8 @@
             this.guna2ToggleSwitch1.Location = new System.Drawing.Point(210, 360);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(38, 24);
-            this.guna2ToggleSwitch1.TabIndex = 7;
+            this.guna2ToggleSwitch1.TabIndex = 0;
+            this.guna2ToggleSwitch1.TabStop = false;
             this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.DarkViolet;
             this.guna2ToggleSwitch1.UncheckedState.BorderThickness = 2;
             this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -140,7 +144,6 @@
             // 
             // enterBoxPassowrd
             // 
-            this.enterBoxPassowrd.Animated = true;
             this.enterBoxPassowrd.BorderColor = System.Drawing.Color.DarkViolet;
             this.enterBoxPassowrd.BorderRadius = 9;
             this.enterBoxPassowrd.BorderThickness = 2;
@@ -151,7 +154,7 @@
             this.enterBoxPassowrd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.enterBoxPassowrd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.enterBoxPassowrd.FillColor = System.Drawing.Color.Transparent;
-            this.enterBoxPassowrd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.enterBoxPassowrd.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
             this.enterBoxPassowrd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.enterBoxPassowrd.ForeColor = System.Drawing.Color.DarkViolet;
             this.enterBoxPassowrd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -163,11 +166,11 @@
             this.enterBoxPassowrd.PlaceholderText = "Passowrd";
             this.enterBoxPassowrd.SelectedText = "";
             this.enterBoxPassowrd.Size = new System.Drawing.Size(286, 65);
-            this.enterBoxPassowrd.TabIndex = 6;
+            this.enterBoxPassowrd.TabIndex = 2;
+            this.enterBoxPassowrd.TabStop = false;
             // 
             // enterBoxName
             // 
-            this.enterBoxName.Animated = true;
             this.enterBoxName.BorderColor = System.Drawing.Color.DarkViolet;
             this.enterBoxName.BorderRadius = 9;
             this.enterBoxName.BorderThickness = 2;
@@ -178,7 +181,7 @@
             this.enterBoxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.enterBoxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.enterBoxName.FillColor = System.Drawing.Color.Transparent;
-            this.enterBoxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.enterBoxName.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
             this.enterBoxName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.enterBoxName.ForeColor = System.Drawing.Color.DarkViolet;
             this.enterBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -190,7 +193,8 @@
             this.enterBoxName.PlaceholderText = "User Name";
             this.enterBoxName.SelectedText = "";
             this.enterBoxName.Size = new System.Drawing.Size(286, 65);
-            this.enterBoxName.TabIndex = 5;
+            this.enterBoxName.TabIndex = 2;
+            this.enterBoxName.TabStop = false;
             // 
             // label3
             // 
@@ -211,17 +215,6 @@
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Billing System C#";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Billing_System.Properties.Resources.logomain;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(506, 69);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(318, 363);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -249,18 +242,31 @@
             this.btnCloseLogin.Location = new System.Drawing.Point(807, 27);
             this.btnCloseLogin.Name = "btnCloseLogin";
             this.btnCloseLogin.Size = new System.Drawing.Size(63, 36);
-            this.btnCloseLogin.TabIndex = 3;
+            this.btnCloseLogin.TabIndex = 1;
+            this.btnCloseLogin.TabStop = false;
             this.btnCloseLogin.Text = "Exit";
             this.btnCloseLogin.Click += new System.EventHandler(this.btnLoginClose_Click);
             // 
             // guna2BorderlessForm2
             // 
             this.guna2BorderlessForm2.AnimateWindow = true;
-            this.guna2BorderlessForm2.BorderRadius = 20;
+            this.guna2BorderlessForm2.AnimationInterval = 200;
+            this.guna2BorderlessForm2.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
             this.guna2BorderlessForm2.ContainerControl = this;
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm2.ShadowColor = System.Drawing.Color.DarkViolet;
             this.guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Billing_System.Properties.Resources.logomain;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(506, 69);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(318, 363);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
