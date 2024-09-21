@@ -20,12 +20,38 @@ namespace Billing_System.Model
 
         private void frmUserAdd_Load(object sender, EventArgs e)
         {
+            if (editID > 0)
+            {
+                MainClass.Functions.AutoLoadForEdit(this, "tblUser", editID);
+            }
 
         }
 
-        //btnSave_Click
+
         public override void btnSave_Click(object sender, EventArgs e)
         {
+            if (MainClass.Functions.Validatation(this) == false)
+            {
+                return;
+            }
+
+            if (editID == 0) // save
+            {
+                MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Insert, editID);
+            }
+            else //update
+            {
+                MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Update, editID);
+            }
+            editID = 0;
+            MainClass.Functions.ClearAll(this);
+        }
+
+        public override void btnDelete_Click(object sender, EventArgs e)
+        {
+            MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Delete, editID);
+            editID = 0;
+            MainClass.Functions.ClearAll(this);
         }
 
     }
