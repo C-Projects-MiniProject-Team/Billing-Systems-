@@ -15,6 +15,7 @@ namespace Billing_System
         public Sample()
         {
             InitializeComponent();
+
         }
 
         private void Sample_Load(object sender, EventArgs e)

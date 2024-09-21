@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,16 @@ namespace Billing_System.Model
         {
             InitializeComponent();
         }
+
+        private void frmUserAdd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //btnSave_Click
+        public override void btnSave_Click(object sender, EventArgs e)
+        {
+        }
+
     }
 }
