@@ -17,7 +17,7 @@ namespace Billing_System
             InitializeComponent();
         }
 
-        public int edit = 0;
+        public int editID = 0;
 
 
         public virtual void btnSave_Click(object sender, EventArgs e)

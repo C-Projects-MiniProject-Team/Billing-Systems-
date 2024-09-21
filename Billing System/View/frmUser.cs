@@ -21,11 +21,14 @@ namespace Billing_System.View
         private void frmUser_Load(object sender, EventArgs e)
         {
             LoadData();
+
+
         }
 
         private void LoadData()
-        { 
-        
+        {
+            
+
         }
 
         public override void txtSearch_TextChanged(object sender, EventArgs e)
@@ -34,12 +37,14 @@ namespace Billing_System.View
         }
         public override void btnAdd_Click(object sender, EventArgs e)
         {
+
             new frmUserAdd().Show();
             LoadData();
         }
 
         public override void guna2DataGridView1_DoubleClick(object sender, EventArgs e)
         {
+            
             LoadData();
         }
     }

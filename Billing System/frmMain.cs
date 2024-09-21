@@ -13,6 +13,8 @@ namespace Billing_System
 {
     public partial class frmMain : Sample
     {
+        public static object Instance { get; internal set; }
+
         public frmMain()
         {
             InitializeComponent();
@@ -78,6 +80,7 @@ namespace Billing_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            //Creating DataBase First
             AddControls(new frmUser());
         }
     }

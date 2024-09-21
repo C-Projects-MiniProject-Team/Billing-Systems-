@@ -35,29 +35,29 @@ namespace Billing_System
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //show the frmMain form condition are user name : admin and password : admin123 equal not quilie then show the error message visibale fale true labele InvlidN and InvalidPd
-            if (enterBoxName.Text == "admin" && enterBoxPassowrd.Text == "admin123")
-            {
-                frmMain obj = new frmMain();
-                this.Hide();
-                obj.Show();
-            }
-            else
-            {
-                InvlidN.Visible = true;
-                InvalidPd.Visible = true;
+            //if (enterBoxName.Text == "admin" && enterBoxPassowrd.Text == "admin123")
+            //{
+            //    frmMain obj = new frmMain();
+            //    this.Hide();
+            //    obj.Show();
+            //}
+            //else
+            //{
+            //    InvlidN.Visible = true;
+            //    InvalidPd.Visible = true;
                
-                //font color red
-                InvlidN.ForeColor = Color.Red;
-                InvalidPd.ForeColor = Color.Red;
+            //    //font color red
+            //    InvlidN.ForeColor = Color.Red;
+            //    InvalidPd.ForeColor = Color.Red;
 
-                //and border color red
+            //    //and border color red
                
-                enterBoxName.BorderColor = Color.Red;
-                enterBoxPassowrd.BorderColor = Color.Red;
+            //    enterBoxName.BorderColor = Color.Red;
+            //    enterBoxPassowrd.BorderColor = Color.Red;
 
 
 
-            }
+            //}
 
 
 
