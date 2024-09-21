@@ -15,6 +15,10 @@ namespace Billing_System
         public Sample()
         {
             InitializeComponent();
+            //MainClass Funtions MsgCaption and conString
+            MainClass.Functions.MsgCaption = "Billing System";
+            MainClass.Functions.conString = "Data Source=LAHIRU\\SQLEXPRESS;Initial Catalog=BillingSystem;Integrated Security=True";
+
 
         }
 
