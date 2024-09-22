@@ -497,7 +497,8 @@ namespace MainClass
             try
             {
                 // Example SQL query to load data for the given ID
-                string qry = $"SELECT * FROM {tableName} WHERE id = @id";
+                string qry = $"SELECT * FROM {tableName} WHERE userID = @id";
+
                 SqlCommand cmd = new SqlCommand(qry, con);
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -602,12 +603,6 @@ namespace MainClass
             Update,
             Delete
         }
-
-
-
-
-
-
 
 
 

@@ -39,6 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.uPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@
             this.InvlidN.Location = new System.Drawing.Point(51, 149);
             this.InvlidN.Name = "InvlidN";
             this.InvlidN.Size = new System.Drawing.Size(49, 20);
-            this.InvlidN.TabIndex = 13;
+            this.InvlidN.TabIndex = 0;
             this.InvlidN.Text = "Name";
             // 
             // uName
@@ -76,11 +78,11 @@
             this.uName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uName.Name = "uName";
             this.uName.PasswordChar = '\0';
-            this.uName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.uName.PlaceholderText = "Name";
+            this.uName.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.uName.PlaceholderText = "first last";
             this.uName.SelectedText = "";
-            this.uName.Size = new System.Drawing.Size(207, 43);
-            this.uName.TabIndex = 12;
+            this.uName.Size = new System.Drawing.Size(207, 52);
+            this.uName.TabIndex = 1;
             this.uName.TabStop = false;
             this.uName.Tag = "v";
             // 
@@ -91,7 +93,7 @@
             this.label2.Location = new System.Drawing.Point(294, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 15;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Username";
             // 
             // uUser
@@ -114,11 +116,11 @@
             this.uUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uUser.Name = "uUser";
             this.uUser.PasswordChar = '\0';
-            this.uUser.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.uUser.PlaceholderText = "User Name";
+            this.uUser.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.uUser.PlaceholderText = "rolename";
             this.uUser.SelectedText = "";
-            this.uUser.Size = new System.Drawing.Size(207, 43);
-            this.uUser.TabIndex = 14;
+            this.uUser.Size = new System.Drawing.Size(207, 52);
+            this.uUser.TabIndex = 2;
             this.uUser.TabStop = false;
             this.uUser.Tag = "v";
             // 
@@ -129,7 +131,7 @@
             this.label3.Location = new System.Drawing.Point(530, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Password";
             // 
             // uPass
@@ -152,11 +154,11 @@
             this.uPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uPass.Name = "uPass";
             this.uPass.PasswordChar = '●';
-            this.uPass.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.uPass.PlaceholderText = "*******";
+            this.uPass.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.uPass.PlaceholderText = "user12#@";
             this.uPass.SelectedText = "";
-            this.uPass.Size = new System.Drawing.Size(207, 43);
-            this.uPass.TabIndex = 16;
+            this.uPass.Size = new System.Drawing.Size(207, 52);
+            this.uPass.TabIndex = 3;
             this.uPass.TabStop = false;
             this.uPass.Tag = "v";
             this.uPass.UseSystemPasswordChar = true;
@@ -168,7 +170,7 @@
             this.label5.Location = new System.Drawing.Point(294, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 20);
-            this.label5.TabIndex = 21;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Email";
             // 
             // uEmail
@@ -191,11 +193,11 @@
             this.uEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uEmail.Name = "uEmail";
             this.uEmail.PasswordChar = '\0';
-            this.uEmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.uEmail.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.uEmail.PlaceholderText = "user@gmail.com";
             this.uEmail.SelectedText = "";
-            this.uEmail.Size = new System.Drawing.Size(207, 43);
-            this.uEmail.TabIndex = 20;
+            this.uEmail.Size = new System.Drawing.Size(207, 52);
+            this.uEmail.TabIndex = 5;
             this.uEmail.TabStop = false;
             // 
             // label6
@@ -205,7 +207,7 @@
             this.label6.Location = new System.Drawing.Point(51, 264);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 19;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Phone";
             // 
             // uPhone
@@ -228,21 +230,39 @@
             this.uPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uPhone.Name = "uPhone";
             this.uPhone.PasswordChar = '\0';
-            this.uPhone.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.uPhone.PlaceholderText = "+94";
+            this.uPhone.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.uPhone.PlaceholderText = "0767776665";
             this.uPhone.SelectedText = "";
-            this.uPhone.Size = new System.Drawing.Size(207, 43);
-            this.uPhone.TabIndex = 18;
+            this.uPhone.Size = new System.Drawing.Size(207, 52);
+            this.uPhone.TabIndex = 4;
             this.uPhone.TabStop = false;
             // 
             // guna2MessageDialog1
             // 
             this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.guna2MessageDialog1.Caption = "Success";
-            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog1.Caption = "Billing System";
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             this.guna2MessageDialog1.Parent = this;
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.guna2MessageDialog1.Text = "User has been successfully added.";
+            this.guna2MessageDialog1.Text = "User has been Successfully Added.       ";
+            // 
+            // guna2MessageDialog2
+            // 
+            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.guna2MessageDialog2.Caption = "Billing System";
+            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.guna2MessageDialog2.Parent = this;
+            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog2.Text = "Are you sure You want to Delete ?.       ";
+            // 
+            // guna2MessageDialog3
+            // 
+            this.guna2MessageDialog3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog3.Caption = "Billing System";
+            this.guna2MessageDialog3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog3.Parent = this;
+            this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog3.Text = "User has been Successfully Update.        ";
             // 
             // frmUserAdd
             // 
@@ -280,5 +300,7 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox uPhone;
         public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog2;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog3;
     }
 }

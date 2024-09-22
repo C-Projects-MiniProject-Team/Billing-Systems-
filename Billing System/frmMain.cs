@@ -80,8 +80,10 @@ namespace Billing_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            
             //Creating DataBase First
             AddControls(new frmUser());
+           
         }
     }
 }

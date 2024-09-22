@@ -26,11 +26,37 @@ namespace Billing_System.View
 
         }
 
-        private void LoadData()
+        private async void LoadData()
         {
-            string qry = @"Select 0 'Sr', userID, uName 'Name', uUser 'username', uPhone 'Phone', uEmail 'Email' from tbluser where uName like '%" + txtSearch.Text + "%' order by userID";
-            MainClass.Functions.LoadData(qry, guna2DataGridView1);
+            string qry = @"Select ROW_NUMBER() OVER(ORDER BY userID) AS 'Sr', userID, uName 'Name', uUser 'username', uPhone 'Phone', uEmail 'Email' 
+               from tbluser where uName like '%" + txtSearch.Text + "%' order by userID";
+
+
+            DataTable dt = null;
+
+            // Run the data-fetching task asynchronously
+            await Task.Run(() =>
+            {
+                // Fetch data in the background thread
+                dt = MainClass.Functions.GetData(qry);
+            });
+
+            // Update the DataGridView on the UI thread
+            if (guna2DataGridView1.InvokeRequired)
+            {
+                guna2DataGridView1.Invoke((MethodInvoker)delegate
+                {
+                    guna2DataGridView1.DataSource = dt;
+                });
+            }
+            else
+            {
+                guna2DataGridView1.DataSource = dt;
+            }
         }
+
+
+
 
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -46,7 +72,7 @@ namespace Billing_System.View
         public override void guna2DataGridView1_DoubleClick(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells[1].Value);
-            new frmUserAdd() { editID = id}.ShowDialog();
+            new frmUserAdd() { editID = id }.ShowDialog();
             LoadData();
         }
     }
