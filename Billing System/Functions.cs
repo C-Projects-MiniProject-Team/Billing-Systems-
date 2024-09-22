@@ -12,10 +12,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MainClass
 {
     class Functions
     {
+
         //Creat Connection
         public static string MsgCaption = "Billing System"; // Add this if needed
         public static string conString = "Data Source=LAHIRU\\SQLEXPRESS;Initial Catalog=BillingSystem;Integrated Security=True";
@@ -250,7 +252,8 @@ namespace MainClass
 
 
 
-
+        
+        
         private static Color vColor = Color.FromArgb(245, 29, 70);
 
         // Validation
@@ -535,6 +538,8 @@ namespace MainClass
             }
         }
 
+
+
         public static void AutoSQL(Form form, string tableName, enmType type, int editID)
         {
             try
@@ -558,24 +563,31 @@ namespace MainClass
                     ht.Add("@userID", editID); // Add the ID for delete query
                 }
 
-                // Loop through all form controls and extract values
+                // Loop through form controls and gather values
                 foreach (Control c in form.Controls)
                 {
                     if (c is Guna.UI2.WinForms.Guna2TextBox txt)
                     {
-                        string colName = txt.Name.Replace("txt", ""); // Assuming TextBox names start with 'txt'
-                        ht.Add("@" + colName, txt.Text); // Add to hashtable
+                        string colName = txt.Name.Replace("txt", "");
+                        ht.Add("@" + colName, txt.Text);
                     }
                     else if (c is Guna.UI2.WinForms.Guna2ComboBox cb)
                     {
-                        string colName = cb.Name.Replace("cb", ""); // Assuming ComboBox names start with 'cb'
-                        ht.Add("@" + colName, cb.SelectedValue); // Add to hashtable
+                        string colName = cb.Name.Replace("cb", "");
+                        ht.Add("@" + colName, cb.SelectedValue);
                     }
-                    // Add handling for other control types as needed
                 }
 
                 // Execute SQL query
-                SQL(qry, ht);
+                int result = SQL(qry, ht);
+
+                // Show success message if rows were affected
+                if (result > 0)
+                {
+                    //MessageBox.Show("xxxxxxxxxSaved successfully.", "Billing System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -590,6 +602,9 @@ namespace MainClass
             Update,
             Delete
         }
+
+
+
 
 
 
