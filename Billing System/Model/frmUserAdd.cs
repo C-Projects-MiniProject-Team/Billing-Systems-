@@ -28,6 +28,7 @@ namespace Billing_System.Model
         }
 
 
+
         public override void btnSave_Click(object sender, EventArgs e)
         {
             if (MainClass.Functions.Validatation(this) == false)
@@ -38,6 +39,8 @@ namespace Billing_System.Model
             if (editID == 0) // save
             {
                 MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Insert, editID);
+                guna2MessageDialog1.Show();
+
             }
             else //update
             {
