@@ -75,13 +75,12 @@ namespace Billing_System
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-
+            AddControls(new frmProduct());
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
             
-            //Creating DataBase First
             AddControls(new frmUser());
            
         }

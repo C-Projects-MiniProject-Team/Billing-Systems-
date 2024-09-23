@@ -116,6 +116,12 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
+    <Compile Include="Model\frmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmProductAdd.Designer.cs">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,12 @@
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmProductAdd.resx">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmUserAdd.resx">
       <DependentUpon>frmUserAdd.cs</DependentUpon>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
@@ -266,6 +284,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
