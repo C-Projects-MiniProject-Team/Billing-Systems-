@@ -5,6 +5,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.26\\billing-systems-\\billing system\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.26\\billing-systems-\\billing system\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.26\\billing-systems-\\billing system\\model\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\model\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.26\\billing-systems-\\billing system\\model\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\model\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|c:\\users\\pc\\desktop\\mini-project\\projectgithub\\2024.09.26\\billing-systems-\\billing system\\view\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C518AB93-6C41-409D-BC54-8051FB66BA47}|Billing System\\Billing System.csproj|solutionrelative:billing system\\view\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmProduct.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\View\\frmProduct.cs",
+              "RelativeDocumentMoniker": "Billing System\\View\\frmProduct.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\View\\frmProduct.cs",
+              "RelativeToolTip": "Billing System\\View\\frmProduct.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:57:03.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmProductAdd.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmProductAdd.cs",
+              "RelativeDocumentMoniker": "Billing System\\Model\\frmProductAdd.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmProductAdd.cs",
+              "RelativeToolTip": "Billing System\\Model\\frmProductAdd.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAwwEkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:51:32.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmUserAdd.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmUserAdd.cs",
+              "RelativeDocumentMoniker": "Billing System\\Model\\frmUserAdd.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmUserAdd.cs",
+              "RelativeToolTip": "Billing System\\Model\\frmUserAdd.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwEMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:51:05.941Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,10 +79,22 @@
               "RelativeDocumentMoniker": "Billing System\\Functions.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Functions.cs",
               "RelativeToolTip": "Billing System\\Functions.cs",
-              "ViewState": "AgIAALACAAAAAAAAAAAAAMYCAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAL8AAAAAAAAAAADwv8gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T20:19:14.236Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmProductAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmProductAdd.cs",
+              "RelativeDocumentMoniker": "Billing System\\Model\\frmProductAdd.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Mini-Project\\ProjectGithub\\2024.09.26\\Billing-Systems-\\Billing System\\Model\\frmProductAdd.cs [Design]",
+              "RelativeToolTip": "Billing System\\Model\\frmProductAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:39:44.147Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

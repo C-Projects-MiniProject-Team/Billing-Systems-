@@ -28,6 +28,7 @@ namespace Billing_System.Model
             if (editID > 0)
             {
                 MainClass.Functions.AutoLoadForEdit(this, "tblProduct", editID);
+                
 
             }
         }
@@ -44,14 +45,14 @@ namespace Billing_System.Model
             if (editID == 0) // save
             {
                 MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Insert, editID);
-                //guna2MessageDialog1.Show();
+                guna2MessageDialog1.Show();
                 MainClass.Functions.ClearAll(this);
 
             }
             else //update
             {
                 MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Update, editID);
-                //guna2MessageDialog3.Show();
+                guna2MessageDialog2.Show();
             }
             editID = 0;
             MainClass.Functions.ClearAll(this);
@@ -60,10 +61,23 @@ namespace Billing_System.Model
 
         public override void btnDelete_Click(object sender, EventArgs e)
         {
+            // Show the confirmation dialog with Yes/No buttons
+            DialogResult result = guna2MessageDialog3.Show();
 
-            pImage.Image = Properties.Resources.product;
+            // Proceed with deletion only if the user selects "Yes"
+            if (result == DialogResult.Yes)
+            {
+                MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Delete, editID);
+                editID = 0;
+                MainClass.Functions.ClearAll(this);
+            }
+            else
+            {
+                // Optional: Handle "No" result if needed, or do nothing
 
+            }
         }
+
 
 
 
