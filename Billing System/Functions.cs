@@ -496,8 +496,27 @@ namespace MainClass
         {
             try
             {
-                // Example SQL query to load data for the given ID
-                string qry = $"SELECT * FROM {tableName} WHERE userID = @id";
+                string idColumn = "";
+
+                // Dynamically choose the correct ID column based on the table name
+                if (tableName == "tblUser")
+                {
+                    idColumn = "userID";
+                }
+                else if (tableName == "tblProduct")
+                {
+                    idColumn = "proID";
+                }
+
+                // Ensure the ID column is defined
+                if (string.IsNullOrEmpty(idColumn))
+                {
+                    MessageBox.Show("Invalid table name provided.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Use the correct ID column for the query
+                string qry = $"SELECT * FROM {tableName} WHERE {idColumn} = @id";
 
                 SqlCommand cmd = new SqlCommand(qry, con);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -529,7 +548,14 @@ namespace MainClass
                                 cb.SelectedValue = row[colName].ToString();
                             }
                         }
-                        // Add handling for other controls like CheckBox, RadioButton, etc. if necessary
+                        else if (c is PictureBox pb && pb.Name == "pImage")
+                        {
+                            if (row["pImage"] != DBNull.Value)
+                            {
+                                byte[] imageBytes = (byte[])row["pImage"];
+                                pb.Image = ByteArrayToImage(imageBytes); // Convert byte array back to image
+                            }
+                        }
                     }
                 }
             }
@@ -541,6 +567,8 @@ namespace MainClass
 
 
 
+
+
         public static void AutoSQL(Form form, string tableName, enmType type, int editID)
         {
             try
@@ -548,34 +576,66 @@ namespace MainClass
                 string qry = string.Empty;
                 Hashtable ht = new Hashtable();
 
-                // Build SQL query based on the type of operation
-                if (type == enmType.Insert)
+                // Build SQL query based on the type of operation and table name
+                if (tableName == "tblProduct")
                 {
-                    qry = $"INSERT INTO {tableName} (uName, uUser, uPass, uPhone, uEmail) VALUES (@uName, @uUser, @uPass, @uPhone, @uEmail)";
+                    if (type == enmType.Insert)
+                    {
+                        qry = $"INSERT INTO {tableName} (pName, pPrice, pCost, pImage) VALUES (@pName, @pPrice, @pCost, @pImage)";
+                    }
+                    else if (type == enmType.Update && editID > 0)
+                    {
+                        qry = $"UPDATE {tableName} SET pName = @pName, pPrice = @pPrice, pCost = @pCost, pImage = @pImage WHERE proID = @proID";
+                        ht.Add("@proID", editID); // Add the ID for the update query
+                    }
+                    else if (type == enmType.Delete && editID > 0)
+                    {
+                        qry = $"DELETE FROM {tableName} WHERE proID = @proID";
+                        ht.Add("@proID", editID); // Add the ID for the delete query
+                    }
                 }
-                else if (type == enmType.Update && editID > 0)
+                else if (tableName == "tblUser")
                 {
-                    qry = $"UPDATE {tableName} SET uName = @uName, uUser = @uUser, uPass = @uPass, uPhone = @uPhone, uEmail = @uEmail WHERE userID = @userID";
-                    ht.Add("@userID", editID); // Add the ID for update query
-                }
-                else if (type == enmType.Delete && editID > 0)
-                {
-                    qry = $"DELETE FROM {tableName} WHERE userID = @userID";
-                    ht.Add("@userID", editID); // Add the ID for delete query
+                    if (type == enmType.Insert)
+                    {
+                        qry = $"INSERT INTO {tableName} (uName, uUser, uPass, uPhone, uEmail) VALUES (@uName, @uUser, @uPass, @uPhone, @uEmail)";
+                    }
+                    else if (type == enmType.Update && editID > 0)
+                    {
+                        qry = $"UPDATE {tableName} SET uName = @uName, uUser = @uUser, uPass = @uPass, uPhone = @uPhone, uEmail = @uEmail WHERE userID = @userID";
+                        ht.Add("@userID", editID); // Add the ID for the update query
+                    }
+                    else if (type == enmType.Delete && editID > 0)
+                    {
+                        qry = $"DELETE FROM {tableName} WHERE userID = @userID";
+                        ht.Add("@userID", editID); // Add the ID for the delete query
+                    }
                 }
 
-                // Loop through form controls and gather values
+                // Loop through form controls and gather values dynamically
                 foreach (Control c in form.Controls)
                 {
-                    if (c is Guna.UI2.WinForms.Guna2TextBox txt)
+                    if (c is Guna2TextBox txt)
                     {
                         string colName = txt.Name.Replace("txt", "");
                         ht.Add("@" + colName, txt.Text);
                     }
-                    else if (c is Guna.UI2.WinForms.Guna2ComboBox cb)
+                    else if (c is Guna2ComboBox cb)
                     {
                         string colName = cb.Name.Replace("cb", "");
                         ht.Add("@" + colName, cb.SelectedValue);
+                    }
+                    else if (c is PictureBox pb && pb.Name == "pImage")
+                    {
+                        // Convert image to byte array
+                        if (pb.Image != null)
+                        {
+                            ht.Add("@pImage", ImageToByteArray(pb.Image));
+                        }
+                        else
+                        {
+                            ht.Add("@pImage", DBNull.Value); // If no image is provided
+                        }
                     }
                 }
 
@@ -585,9 +645,7 @@ namespace MainClass
                 // Show success message if rows were affected
                 if (result > 0)
                 {
-                    //MessageBox.Show("xxxxxxxxxSaved successfully.", "Billing System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                    MessageBox.Show("Operation completed successfully.", MsgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -595,6 +653,26 @@ namespace MainClass
                 MessageBox.Show(ex.ToString(), "Error");
             }
         }
+        public static byte[] ImageToByteArray(Image imageIn)
+        {
+            using (var ms = new System.IO.MemoryStream())
+            {
+                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (var ms = new System.IO.MemoryStream(byteArrayIn))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+
+
+
 
 
         public enum enmType
@@ -603,6 +681,33 @@ namespace MainClass
             Update,
             Delete
         }
+
+
+        public static void BrowsePicture(PictureBox pictureBox)
+        {
+            // Create a new OpenFileDialog for browsing the picture
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp", // Specify the file types you want to allow
+                Title = "Select a Picture"
+            };
+
+            // Show the dialog and check if the user selected a file
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Load the selected image into the PictureBox
+                    pictureBox.Image = Image.FromFile(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while loading the image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
 
 
 

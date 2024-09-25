@@ -28,9 +28,8 @@ namespace Billing_System.View
 
         private async void LoadData()
         {
-            string qry = @"Select ROW_NUMBER() OVER(ORDER BY userID) AS 'Sr', userID, uName 'Name', uUser 'username', uPhone 'Phone', uEmail 'Email' 
+            string qry = @"Select ROW_NUMBER() OVER(ORDER BY userID) AS 'Sr#', userID, uName 'Name', uUser 'Role',uPass 'Password', uPhone 'Phone', uEmail 'Email' 
                from tbluser where uName like '%" + txtSearch.Text + "%' order by userID";
-
 
             DataTable dt = null;
 
@@ -47,13 +46,32 @@ namespace Billing_System.View
                 guna2DataGridView1.Invoke((MethodInvoker)delegate
                 {
                     guna2DataGridView1.DataSource = dt;
+                    SetSrColumnWidth(); // Call this after data is loaded
                 });
             }
             else
             {
                 guna2DataGridView1.DataSource = dt;
+                SetSrColumnWidth(); // Call this after data is loaded
             }
         }
+
+        // Method to adjust the "Sr" column width
+        private void SetSrColumnWidth()
+        {
+            if (guna2DataGridView1.Columns["Sr#"] != null)
+            {
+                guna2DataGridView1.Columns["Sr#"].Width = 80; // Set the width of "Sr" to 30 pixels
+            }
+            // Adjust the "userID" column width
+            if (guna2DataGridView1.Columns["userID"] != null)
+            {
+                guna2DataGridView1.Columns["userID"].Width = 80; // Set the width of "userID" to 50 pixels (adjust as needed)
+            }
+        }
+
+
+
 
 
 

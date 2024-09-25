@@ -1,0 +1,73 @@
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Billing_System.Model
+{
+    public partial class frmProductAdd : SampleAdd
+    {
+        public frmProductAdd()
+        {
+            InitializeComponent();
+        }
+
+        private void btnBrowser_Click(object sender, EventArgs e)
+        {
+            MainClass.Functions.BrowsePicture(pImage);
+        }
+
+        private void frmProductAdd_Load(object sender, EventArgs e)
+        {
+            if (editID > 0)
+            {
+                MainClass.Functions.AutoLoadForEdit(this, "tblProduct", editID);
+
+            }
+        }
+
+
+
+        public override void btnSave_Click(object sender, EventArgs e)
+        {
+            if (MainClass.Functions.Validatation(this) == false)
+            {
+                return;
+            }
+
+            if (editID == 0) // save
+            {
+                MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Insert, editID);
+                //guna2MessageDialog1.Show();
+                MainClass.Functions.ClearAll(this);
+
+            }
+            else //update
+            {
+                MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Update, editID);
+                //guna2MessageDialog3.Show();
+            }
+            editID = 0;
+            MainClass.Functions.ClearAll(this);
+            pImage.Image = Properties.Resources.product;
+        }
+
+        public override void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            pImage.Image = Properties.Resources.product;
+
+        }
+
+
+
+
+
+    }
+}
