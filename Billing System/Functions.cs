@@ -190,9 +190,15 @@ namespace MainClass
                 {
                     ((CheckBox)c).Checked = false;
                 }
+                else if (type == typeof(PictureBox)) // Clear PictureBox image
+                {
+                    PictureBox pb = (PictureBox)c;
+                    pb.Image = null;
+                }
                 // You can add other controls like this
             }
         }
+
 
         public static void BlurBackground(Form Model)
         {
@@ -645,7 +651,7 @@ namespace MainClass
                 // Show success message if rows were affected
                 if (result > 0)
                 {
-                    MessageBox.Show("Operation completed successfully.", MsgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Operation completed successfully.", MsgCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -707,8 +713,6 @@ namespace MainClass
             }
         }
 
-
-        // For Image
 
 
     }

@@ -36,6 +36,9 @@
             this.pPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBrowser = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             // 
             this.InvlidN.AutoSize = true;
             this.InvlidN.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvlidN.Location = new System.Drawing.Point(51, 159);
+            this.InvlidN.Location = new System.Drawing.Point(44, 162);
             this.InvlidN.Name = "InvlidN";
             this.InvlidN.Size = new System.Drawing.Size(49, 20);
             this.InvlidN.TabIndex = 3;
@@ -70,12 +73,12 @@
             this.pName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pName.ForeColor = System.Drawing.Color.DarkViolet;
             this.pName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pName.Location = new System.Drawing.Point(44, 183);
+            this.pName.Location = new System.Drawing.Point(37, 186);
             this.pName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pName.Name = "pName";
             this.pName.PasswordChar = '\0';
             this.pName.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.pName.PlaceholderText = "first last";
+            this.pName.PlaceholderText = "Product Name";
             this.pName.SelectedText = "";
             this.pName.Size = new System.Drawing.Size(299, 59);
             this.pName.TabIndex = 4;
@@ -86,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 406);
+            this.label2.Location = new System.Drawing.Point(44, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 5;
@@ -108,12 +111,12 @@
             this.pCost.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pCost.ForeColor = System.Drawing.Color.DarkViolet;
             this.pCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pCost.Location = new System.Drawing.Point(44, 430);
+            this.pCost.Location = new System.Drawing.Point(37, 398);
             this.pCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pCost.Name = "pCost";
             this.pCost.PasswordChar = '\0';
             this.pCost.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.pCost.PlaceholderText = "first last";
+            this.pCost.PlaceholderText = "Product Cost";
             this.pCost.SelectedText = "";
             this.pCost.Size = new System.Drawing.Size(299, 59);
             this.pCost.TabIndex = 6;
@@ -124,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 280);
+            this.label3.Location = new System.Drawing.Point(44, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 7;
@@ -146,12 +149,12 @@
             this.pPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pPrice.ForeColor = System.Drawing.Color.DarkViolet;
             this.pPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pPrice.Location = new System.Drawing.Point(44, 304);
+            this.pPrice.Location = new System.Drawing.Point(37, 292);
             this.pPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pPrice.Name = "pPrice";
             this.pPrice.PasswordChar = '\0';
             this.pPrice.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.pPrice.PlaceholderText = "first last";
+            this.pPrice.PlaceholderText = "Product Price";
             this.pPrice.SelectedText = "";
             this.pPrice.Size = new System.Drawing.Size(299, 59);
             this.pPrice.TabIndex = 8;
@@ -178,9 +181,9 @@
             this.btnBrowser.Image = global::Billing_System.Properties.Resources.folder;
             this.btnBrowser.ImageOffset = new System.Drawing.Point(-3, 2);
             this.btnBrowser.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBrowser.Location = new System.Drawing.Point(404, 489);
+            this.btnBrowser.Location = new System.Drawing.Point(376, 450);
             this.btnBrowser.Name = "btnBrowser";
-            this.btnBrowser.Size = new System.Drawing.Size(390, 55);
+            this.btnBrowser.Size = new System.Drawing.Size(359, 55);
             this.btnBrowser.TabIndex = 12;
             this.btnBrowser.Text = "BROWSE";
             this.btnBrowser.UseTransparentBackground = true;
@@ -193,19 +196,46 @@
             this.pImage.FillColor = System.Drawing.Color.Transparent;
             this.pImage.Image = global::Billing_System.Properties.Resources.logomain;
             this.pImage.ImageRotate = 0F;
-            this.pImage.Location = new System.Drawing.Point(404, 145);
+            this.pImage.Location = new System.Drawing.Point(376, 126);
             this.pImage.Name = "pImage";
-            this.pImage.Size = new System.Drawing.Size(390, 370);
+            this.pImage.Size = new System.Drawing.Size(359, 332);
             this.pImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pImage.TabIndex = 9;
             this.pImage.TabStop = false;
             this.pImage.UseTransparentBackground = true;
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = "Billing System";
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog1.Parent = this;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog1.Text = "Add!............................................?";
+            // 
+            // guna2MessageDialog2
+            // 
+            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog2.Caption = "Billing System";
+            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog2.Parent = this;
+            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog2.Text = "Updated!..........................................?";
+            // 
+            // guna2MessageDialog3
+            // 
+            this.guna2MessageDialog3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.guna2MessageDialog3.Caption = "Billing System";
+            this.guna2MessageDialog3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.guna2MessageDialog3.Parent = this;
+            this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog3.Text = "Deleted ?...................................?";
+            // 
             // frmProductAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 688);
+            this.ClientSize = new System.Drawing.Size(772, 628);
             this.Controls.Add(this.btnBrowser);
             this.Controls.Add(this.pImage);
             this.Controls.Add(this.label3);
@@ -233,5 +263,8 @@
         private Guna.UI2.WinForms.Guna2TextBox pPrice;
         private Guna.UI2.WinForms.Guna2PictureBox pImage;
         public Guna.UI2.WinForms.Guna2GradientButton btnBrowser;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog2;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog3;
     }
 }
