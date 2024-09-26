@@ -51,7 +51,7 @@
             // 
             this.InvlidN.AutoSize = true;
             this.InvlidN.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvlidN.Location = new System.Drawing.Point(44, 162);
+            this.InvlidN.Location = new System.Drawing.Point(44, 145);
             this.InvlidN.Name = "InvlidN";
             this.InvlidN.Size = new System.Drawing.Size(49, 20);
             this.InvlidN.TabIndex = 3;
@@ -73,7 +73,7 @@
             this.pName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pName.ForeColor = System.Drawing.Color.DarkViolet;
             this.pName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pName.Location = new System.Drawing.Point(37, 186);
+            this.pName.Location = new System.Drawing.Point(37, 169);
             this.pName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pName.Name = "pName";
             this.pName.PasswordChar = '\0';
@@ -89,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 374);
+            this.label2.Location = new System.Drawing.Point(44, 377);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 5;
@@ -111,7 +111,7 @@
             this.pCost.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pCost.ForeColor = System.Drawing.Color.DarkViolet;
             this.pCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pCost.Location = new System.Drawing.Point(37, 398);
+            this.pCost.Location = new System.Drawing.Point(37, 401);
             this.pCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pCost.Name = "pCost";
             this.pCost.PasswordChar = '\0';
@@ -127,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 268);
+            this.label3.Location = new System.Drawing.Point(44, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 7;
@@ -149,7 +149,7 @@
             this.pPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.pPrice.ForeColor = System.Drawing.Color.DarkViolet;
             this.pPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pPrice.Location = new System.Drawing.Point(37, 292);
+            this.pPrice.Location = new System.Drawing.Point(37, 286);
             this.pPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pPrice.Name = "pPrice";
             this.pPrice.PasswordChar = '\0';
@@ -211,7 +211,7 @@
             this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             this.guna2MessageDialog1.Parent = this;
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.guna2MessageDialog1.Text = "Add!............................................?";
+            this.guna2MessageDialog1.Text = "Product has been Successfully Added!";
             // 
             // guna2MessageDialog2
             // 
@@ -220,7 +220,7 @@
             this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             this.guna2MessageDialog2.Parent = this;
             this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.guna2MessageDialog2.Text = "Updated!..........................................?";
+            this.guna2MessageDialog2.Text = "Product has been Successfully Updated!";
             // 
             // guna2MessageDialog3
             // 
@@ -229,7 +229,7 @@
             this.guna2MessageDialog3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
             this.guna2MessageDialog3.Parent = this;
             this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.guna2MessageDialog3.Text = "Deleted ?...................................?";
+            this.guna2MessageDialog3.Text = "Are you sure You want to Delete ?\n";
             // 
             // frmProductAdd
             // 

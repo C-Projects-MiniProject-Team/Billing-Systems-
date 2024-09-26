@@ -56,8 +56,13 @@ namespace Billing_System.Model
             }
             editID = 0;
             MainClass.Functions.ClearAll(this);
-            pImage.Image = Properties.Resources.product;
+
+            // Clear the PictureBox after saving
+            pImage.Image = null; // Or set to a default image
         }
+
+
+
 
         public override void btnDelete_Click(object sender, EventArgs e)
         {
@@ -70,13 +75,12 @@ namespace Billing_System.Model
                 MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Delete, editID);
                 editID = 0;
                 MainClass.Functions.ClearAll(this);
-            }
-            else
-            {
-                // Optional: Handle "No" result if needed, or do nothing
 
+                // Clear the PictureBox after deleting
+                pImage.Image = null; // Or reset to default image if needed
             }
         }
+
 
 
 
