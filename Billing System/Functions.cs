@@ -168,7 +168,8 @@ namespace MainClass
             }
         }
 
-        // Clear controls on form
+
+        //Clear...............................
         public static void ClearAll(Form F)
         {
             foreach (Control c in F.Controls)
@@ -183,7 +184,6 @@ namespace MainClass
                 else if (type == typeof(Guna.UI2.WinForms.Guna2ComboBox))
                 {
                     Guna.UI2.WinForms.Guna2ComboBox cb = (Guna.UI2.WinForms.Guna2ComboBox)c;
-                    cb.SelectedIndex = 0;
                     cb.SelectedIndex = -1;
                 }
                 else if (type == typeof(CheckBox))
@@ -193,11 +193,12 @@ namespace MainClass
                 else if (type == typeof(PictureBox)) // Clear PictureBox image
                 {
                     PictureBox pb = (PictureBox)c;
-                    pb.Image = null;
+                    pb.Image = null; // Or reset to a default image
                 }
-                // You can add other controls like this
+                // Add any other control types as needed
             }
         }
+
 
 
         public static void BlurBackground(Form Model)
