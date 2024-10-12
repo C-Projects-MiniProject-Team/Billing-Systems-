@@ -38,7 +38,7 @@ namespace Billing_System.View
 
         private async void LoadData()
         {
-            string qry = @"SELECT u.userID, u.uName 'Name', r.RoleName 'Role', u.uPass 'Password', u.uPhone 'Phone', u.uEmail 'Email', u.uImage
+            string qry = @"SELECT u.userID, u.uName 'Name', r.RoleName 'Role', u.uEmail 'Email', u.uPhone 'Phone', u.uPass 'Password', u.uImage
                            FROM tblUser u
                            JOIN tblRole r ON u.uRole = r.RoleID
                            WHERE u.uName LIKE '%" + txtSearch.Text + "%' ORDER BY u.userID";
@@ -78,6 +78,9 @@ namespace Billing_System.View
                 }
             }
 
+            // Add cell formatting event to mask the password
+            guna2DataGridView1.CellFormatting += guna2DataGridView1_CellFormatting;
+
             SetSrColumnWidth();
         }
 
@@ -102,6 +105,17 @@ namespace Billing_System.View
             if (guna2DataGridView1.Columns["ProfilePicture"] != null)
             {
                 guna2DataGridView1.Columns["ProfilePicture"].Width = 100;
+            }
+        }
+
+        // Event to mask password as dots in the DataGridView
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView1.Columns["Password"].Index && e.Value != null)
+            {
+                // Mask the password as dots
+                e.Value = new string('•', e.Value.ToString().Length);
+                e.FormattingApplied = true;
             }
         }
 
