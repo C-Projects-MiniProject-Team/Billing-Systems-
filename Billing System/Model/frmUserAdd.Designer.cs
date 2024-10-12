@@ -30,8 +30,6 @@
         {
             this.InvlidN = new System.Windows.Forms.Label();
             this.uName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.uUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,6 +39,11 @@
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.uRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.picuterBoxUser = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PicUpload = new Guna.UI2.WinForms.Guna2GradientButton();
+            ((System.ComponentModel.ISupportInitialize)(this.picuterBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,49 +89,11 @@
             this.uName.TabStop = false;
             this.uName.Tag = "v";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(294, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Username";
-            // 
-            // uUser
-            // 
-            this.uUser.BorderColor = System.Drawing.Color.DarkViolet;
-            this.uUser.BorderRadius = 9;
-            this.uUser.BorderThickness = 2;
-            this.uUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uUser.DefaultText = "";
-            this.uUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.uUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.uUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.uUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.uUser.FillColor = System.Drawing.Color.Transparent;
-            this.uUser.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
-            this.uUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.uUser.ForeColor = System.Drawing.Color.DarkViolet;
-            this.uUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.uUser.Location = new System.Drawing.Point(287, 173);
-            this.uUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uUser.Name = "uUser";
-            this.uUser.PasswordChar = '\0';
-            this.uUser.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.uUser.PlaceholderText = "rolename";
-            this.uUser.SelectedText = "";
-            this.uUser.Size = new System.Drawing.Size(207, 52);
-            this.uUser.TabIndex = 2;
-            this.uUser.TabStop = false;
-            this.uUser.Tag = "v";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(530, 149);
+            this.label3.Location = new System.Drawing.Point(51, 389);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 0;
@@ -150,7 +115,7 @@
             this.uPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.uPass.ForeColor = System.Drawing.Color.DarkViolet;
             this.uPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.uPass.Location = new System.Drawing.Point(523, 173);
+            this.uPass.Location = new System.Drawing.Point(44, 413);
             this.uPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uPass.Name = "uPass";
             this.uPass.PasswordChar = '●';
@@ -167,7 +132,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(294, 264);
+            this.label5.Location = new System.Drawing.Point(291, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 0;
@@ -189,7 +154,7 @@
             this.uEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.uEmail.ForeColor = System.Drawing.Color.DarkViolet;
             this.uEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.uEmail.Location = new System.Drawing.Point(287, 288);
+            this.uEmail.Location = new System.Drawing.Point(284, 288);
             this.uEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uEmail.Name = "uEmail";
             this.uEmail.PasswordChar = '\0';
@@ -264,24 +229,97 @@
             this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog3.Text = "User has been Successfully Update.        ";
             // 
+            // uRole
+            // 
+            this.uRole.BackColor = System.Drawing.Color.Transparent;
+            this.uRole.BorderColor = System.Drawing.Color.DarkViolet;
+            this.uRole.BorderRadius = 9;
+            this.uRole.BorderThickness = 2;
+            this.uRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.uRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uRole.FillColor = System.Drawing.Color.Black;
+            this.uRole.FocusedColor = System.Drawing.Color.Fuchsia;
+            this.uRole.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.uRole.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold);
+            this.uRole.ForeColor = System.Drawing.Color.DarkViolet;
+            this.uRole.ItemHeight = 39;
+            this.uRole.Location = new System.Drawing.Point(281, 173);
+            this.uRole.Name = "uRole";
+            this.uRole.Size = new System.Drawing.Size(207, 45);
+            this.uRole.TabIndex = 12;
+            // 
+            // picuterBoxUser
+            // 
+            this.picuterBoxUser.BackColor = System.Drawing.Color.Transparent;
+            this.picuterBoxUser.FillColor = System.Drawing.Color.Transparent;
+            this.picuterBoxUser.Image = global::Billing_System.Properties.Resources.logomain;
+            this.picuterBoxUser.ImageRotate = 0F;
+            this.picuterBoxUser.Location = new System.Drawing.Point(527, 134);
+            this.picuterBoxUser.Name = "picuterBoxUser";
+            this.picuterBoxUser.Size = new System.Drawing.Size(285, 317);
+            this.picuterBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picuterBoxUser.TabIndex = 10;
+            this.picuterBoxUser.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(288, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Role";
+            // 
+            // PicUpload
+            // 
+            this.PicUpload.Animated = true;
+            this.PicUpload.BackColor = System.Drawing.Color.Transparent;
+            this.PicUpload.BorderColor = System.Drawing.Color.MediumOrchid;
+            this.PicUpload.BorderRadius = 3;
+            this.PicUpload.BorderThickness = 3;
+            this.PicUpload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PicUpload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PicUpload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PicUpload.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PicUpload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PicUpload.FillColor = System.Drawing.Color.DarkViolet;
+            this.PicUpload.FillColor2 = System.Drawing.Color.MediumOrchid;
+            this.PicUpload.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.PicUpload.ForeColor = System.Drawing.Color.White;
+            this.PicUpload.HoverState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.PicUpload.Image = global::Billing_System.Properties.Resources.folder;
+            this.PicUpload.ImageOffset = new System.Drawing.Point(-3, 2);
+            this.PicUpload.ImageSize = new System.Drawing.Size(25, 25);
+            this.PicUpload.Location = new System.Drawing.Point(527, 443);
+            this.PicUpload.Name = "PicUpload";
+            this.PicUpload.Size = new System.Drawing.Size(285, 55);
+            this.PicUpload.TabIndex = 13;
+            this.PicUpload.Text = "BROWSE";
+            this.PicUpload.UseTransparentBackground = true;
+            this.PicUpload.Click += new System.EventHandler(this.PicUpload_Click);
+            // 
             // frmUserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.ClientSize = new System.Drawing.Size(895, 623);
+            this.Controls.Add(this.PicUpload);
+            this.Controls.Add(this.uRole);
+            this.Controls.Add(this.picuterBoxUser);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.uEmail);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.uPhone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uPass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.uUser);
             this.Controls.Add(this.InvlidN);
             this.Controls.Add(this.uName);
             this.Name = "frmUserAdd";
             this.Text = "frmUserAdd";
             this.Load += new System.EventHandler(this.frmUserAdd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picuterBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,8 +329,6 @@
 
         private System.Windows.Forms.Label InvlidN;
         private Guna.UI2.WinForms.Guna2TextBox uName;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox uUser;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox uPass;
         private System.Windows.Forms.Label label5;
@@ -302,5 +338,9 @@
         public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
         public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog2;
         public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog3;
+        private Guna.UI2.WinForms.Guna2ComboBox uRole;
+        private Guna.UI2.WinForms.Guna2PictureBox picuterBoxUser;
+        private System.Windows.Forms.Label label2;
+        public Guna.UI2.WinForms.Guna2GradientButton PicUpload;
     }
 }
