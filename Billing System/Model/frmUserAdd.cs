@@ -16,23 +16,26 @@ namespace Billing_System.Model
 
         private void frmUserAdd_Load(object sender, EventArgs e)
         {
-            if (editID > 0) // If editing an existing user
-            {
-                // Load user data for editing
-                MainClass.Functions.AutoLoadForEdit(this, "tblUser", editID);
+            // Disable autocomplete for password field
+            uPass.AutoCompleteMode = AutoCompleteMode.None;
+            uPass.AutoCompleteSource = AutoCompleteSource.None;
 
-                // Retrieve the user's role (assuming it's stored as RoleID)
+            // Set the password to be hidden initially
+            uPass.UseSystemPasswordChar = true;
+
+            // Ensure the checkbox is unchecked by default
+            checkBoxBTN.Checked = false;
+
+            // Existing user edit logic
+            if (editID > 0)
+            {
+                MainClass.Functions.AutoLoadForEdit(this, "tblUser", editID);
                 object userRoleObj = MainClass.Functions.GetFieldValue("SELECT uRole FROM tblUser WHERE userID = " + editID);
 
                 if (userRoleObj != null && userRoleObj != DBNull.Value)
                 {
-                    // Safely convert the result to an integer
                     int userRoleId = Convert.ToInt32(userRoleObj);
-
-                    // Load roles into ComboBox
                     LoadRoles();
-
-                    // Set the user's role in the ComboBox based on the RoleID
                     uRole.SelectedValue = userRoleId;
                 }
                 else
@@ -42,15 +45,17 @@ namespace Billing_System.Model
             }
             else
             {
-                // New user creation, no pre-selection
                 LoadRoles();
                 uRole.SelectedIndex = -1;
             }
 
-            // Enable and make sure the ComboBox is visible
             uRole.Visible = true;
             uRole.Enabled = true;
         }
+
+
+
+
 
         // Helper method to load roles
         private void LoadRoles()
@@ -193,5 +198,22 @@ namespace Billing_System.Model
         {
             // You can add custom behavior for clicking on the PictureBox here if needed
         }
+
+        private void checkBoxBTN_CheckedChanged(object sender, EventArgs e)
+        {
+            // Toggle password visibility
+            if (checkBoxBTN.Checked)
+            {
+                // Show password
+                uPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Hide password
+                uPass.UseSystemPasswordChar = true;
+            }
+        }
+
+
     }
 }

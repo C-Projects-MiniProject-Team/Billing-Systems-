@@ -31,7 +31,6 @@
             this.InvlidN = new System.Windows.Forms.Label();
             this.uName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.uPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.uEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,6 +42,9 @@
             this.picuterBoxUser = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PicUpload = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.uPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxBTN = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.picuterBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,35 +100,6 @@
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Password";
-            // 
-            // uPass
-            // 
-            this.uPass.BorderColor = System.Drawing.Color.DarkViolet;
-            this.uPass.BorderRadius = 9;
-            this.uPass.BorderThickness = 2;
-            this.uPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uPass.DefaultText = "";
-            this.uPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.uPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.uPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.uPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.uPass.FillColor = System.Drawing.Color.Transparent;
-            this.uPass.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
-            this.uPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.uPass.ForeColor = System.Drawing.Color.DarkViolet;
-            this.uPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.uPass.Location = new System.Drawing.Point(44, 413);
-            this.uPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uPass.Name = "uPass";
-            this.uPass.PasswordChar = '●';
-            this.uPass.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.uPass.PlaceholderText = "user12#@";
-            this.uPass.SelectedText = "";
-            this.uPass.Size = new System.Drawing.Size(207, 52);
-            this.uPass.TabIndex = 3;
-            this.uPass.TabStop = false;
-            this.uPass.Tag = "v";
-            this.uPass.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -299,11 +272,71 @@
             this.PicUpload.UseTransparentBackground = true;
             this.PicUpload.Click += new System.EventHandler(this.PicUpload_Click);
             // 
+            // uPass
+            // 
+            this.uPass.BorderColor = System.Drawing.Color.DarkViolet;
+            this.uPass.BorderRadius = 9;
+            this.uPass.BorderThickness = 2;
+            this.uPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uPass.DefaultText = "";
+            this.uPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.uPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.uPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.uPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.uPass.FillColor = System.Drawing.Color.Transparent;
+            this.uPass.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.uPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.uPass.ForeColor = System.Drawing.Color.DarkViolet;
+            this.uPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.uPass.Location = new System.Drawing.Point(44, 413);
+            this.uPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uPass.Name = "uPass";
+            this.uPass.PasswordChar = '\0';
+            this.uPass.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.uPass.PlaceholderText = "user12#@";
+            this.uPass.SelectedText = "";
+            this.uPass.Size = new System.Drawing.Size(207, 52);
+            this.uPass.TabIndex = 14;
+            this.uPass.TabStop = false;
+            this.uPass.Tag = "v";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(335, 431);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Show Password";
+            // 
+            // checkBoxBTN
+            // 
+            this.checkBoxBTN.CheckedState.BorderColor = System.Drawing.Color.DarkViolet;
+            this.checkBoxBTN.CheckedState.BorderThickness = 2;
+            this.checkBoxBTN.CheckedState.FillColor = System.Drawing.Color.DarkViolet;
+            this.checkBoxBTN.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.checkBoxBTN.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.checkBoxBTN.Location = new System.Drawing.Point(295, 428);
+            this.checkBoxBTN.Name = "checkBoxBTN";
+            this.checkBoxBTN.Size = new System.Drawing.Size(38, 24);
+            this.checkBoxBTN.TabIndex = 16;
+            this.checkBoxBTN.TabStop = false;
+            this.checkBoxBTN.UncheckedState.BorderColor = System.Drawing.Color.DarkViolet;
+            this.checkBoxBTN.UncheckedState.BorderThickness = 2;
+            this.checkBoxBTN.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.checkBoxBTN.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.checkBoxBTN.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.checkBoxBTN.CheckedChanged += new System.EventHandler(this.checkBoxBTN_CheckedChanged);
+            // 
             // frmUserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 623);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.checkBoxBTN);
+            this.Controls.Add(this.uPass);
             this.Controls.Add(this.PicUpload);
             this.Controls.Add(this.uRole);
             this.Controls.Add(this.picuterBoxUser);
@@ -313,7 +346,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.uPhone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.uPass);
             this.Controls.Add(this.InvlidN);
             this.Controls.Add(this.uName);
             this.Name = "frmUserAdd";
@@ -330,7 +362,6 @@
         private System.Windows.Forms.Label InvlidN;
         private Guna.UI2.WinForms.Guna2TextBox uName;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox uPass;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox uEmail;
         private System.Windows.Forms.Label label6;
@@ -342,5 +373,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox picuterBoxUser;
         private System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2GradientButton PicUpload;
+        private Guna.UI2.WinForms.Guna2TextBox uPass;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch checkBoxBTN;
     }
 }
