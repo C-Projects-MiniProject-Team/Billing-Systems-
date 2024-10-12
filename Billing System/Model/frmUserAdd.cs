@@ -27,11 +27,13 @@ namespace Billing_System.Model
             checkBoxBTN.Checked = false;
 
             // Existing user edit logic
-            if (editID > 0)
+            if (editID > 0) // If editing an existing user
             {
+                // Load user data for editing
                 MainClass.Functions.AutoLoadForEdit(this, "tblUser", editID);
-                object userRoleObj = MainClass.Functions.GetFieldValue("SELECT uRole FROM tblUser WHERE userID = " + editID);
 
+                // Retrieve the user's role
+                object userRoleObj = MainClass.Functions.GetFieldValue("SELECT uRole FROM tblUser WHERE userID = " + editID);
                 if (userRoleObj != null && userRoleObj != DBNull.Value)
                 {
                     int userRoleId = Convert.ToInt32(userRoleObj);
@@ -42,9 +44,25 @@ namespace Billing_System.Model
                 {
                     MessageBox.Show("Error: No role found for the user.");
                 }
+
+                // **Retrieve and decrypt the user's password**
+                object encryptedPasswordObj = MainClass.Functions.GetFieldValue("SELECT uPass FROM tblUser WHERE userID = " + editID);
+                if (encryptedPasswordObj != null && encryptedPasswordObj != DBNull.Value)
+                {
+                    string encryptedPassword = encryptedPasswordObj.ToString();
+                    string decryptedPassword = SecurityFunctions.DecryptPassword(encryptedPassword);
+
+                    // Set the decrypted password in the password TextBox
+                    uPass.Text = decryptedPassword;
+                }
+                else
+                {
+                    MessageBox.Show("Error: No password found for the user.");
+                }
             }
             else
             {
+                // For new user creation, no pre-selection or password
                 LoadRoles();
                 uRole.SelectedIndex = -1;
             }
@@ -85,7 +103,7 @@ namespace Billing_System.Model
             bool isValid = true;
 
             // Validate Name field
-            if (string.IsNullOrWhiteSpace(uName.Text)) // Change txtName to uName
+            if (string.IsNullOrWhiteSpace(uName.Text)) // Validate uName field
             {
                 ShowValidationError(uName, "Required");
                 isValid = false;
@@ -99,7 +117,7 @@ namespace Billing_System.Model
             }
 
             // Validate Password field
-            if (string.IsNullOrWhiteSpace(uPass.Text)) // Change txtPassword to uPass
+            if (string.IsNullOrWhiteSpace(uPass.Text)) // Validate uPass field
             {
                 ShowValidationError(uPass, "Required");
                 isValid = false;
@@ -111,21 +129,27 @@ namespace Billing_System.Model
                 return;
             }
 
+            // **Encrypt the password before saving**
+            string encryptedPassword = SecurityFunctions.EncryptPassword(uPass.Text);
+
             // Proceed with save operation if validation passes
             if (editID == 0) // Insert new user
             {
+                // Encrypt the password before saving
                 MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Insert, editID);
-                guna2MessageDialog1.Show();
+                guna2MessageDialog1.Show(); // Show success message
                 ClearFields(); // Clear all fields including image
             }
             else // Update existing user
             {
+                // Encrypt the password before saving
                 MainClass.Functions.AutoSQL(this, "tblUser", MainClass.Functions.enmType.Update, editID);
-                guna2MessageDialog3.Show();
+                guna2MessageDialog3.Show(); // Show update message
             }
 
-            editID = 0;
+            editID = 0; // Reset editID after save/update
         }
+
 
 
 

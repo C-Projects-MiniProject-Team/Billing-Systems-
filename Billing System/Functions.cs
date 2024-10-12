@@ -729,7 +729,16 @@ namespace MainClass
                     if (c is Guna2TextBox txt)
                     {
                         string colName = txt.Name.Replace("txt", "");
-                        ht.Add("@" + colName, txt.Text);
+
+                        // **Encrypt password field before saving to database**
+                        if (colName == "uPass")
+                        {
+                            ht.Add("@" + colName, SecurityFunctions.EncryptPassword(txt.Text));
+                        }
+                        else
+                        {
+                            ht.Add("@" + colName, txt.Text);
+                        }
                     }
                     else if (c is Guna2ComboBox cb && cb.Name == "uRole")
                     {
@@ -775,7 +784,7 @@ namespace MainClass
                 // Optional: Show success message if rows were affected
                 if (result > 0)
                 {
-                    // You can add success messages here if needed
+                    MessageBox.Show("Operation completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -783,8 +792,6 @@ namespace MainClass
                 MessageBox.Show(ex.ToString(), "Error");
             }
         }
-
-
 
 
 
