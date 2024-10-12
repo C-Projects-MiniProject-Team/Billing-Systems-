@@ -20,7 +20,7 @@ namespace Billing_System.View
 
         private async void LoadData()
         {
-            string qry = @"Select ROW_NUMBER() OVER(ORDER BY proID) AS 'Sr#', proID, pName 'Name', pPrice 'Price', pCost 'Cost'
+            string qry = @"Select ROW_NUMBER() OVER(ORDER BY proID) AS 'Sr#', proID, pName 'Name', pPrice 'Price (Rs.)', pCost 'Cost (Rs.)'
                            from tblProduct where pName like '%" + txtSearch.Text + "%' order by proID";
 
             DataTable dt = null;

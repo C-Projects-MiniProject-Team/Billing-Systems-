@@ -18,6 +18,10 @@ namespace Billing_System.Model
             InitializeComponent();
         }
 
+
+
+
+
         private void btnBrowser_Click(object sender, EventArgs e)
         {
             MainClass.Functions.BrowsePicture(pImage);
@@ -28,12 +32,8 @@ namespace Billing_System.Model
             if (editID > 0)
             {
                 MainClass.Functions.AutoLoadForEdit(this, "tblProduct", editID);
-                
-
             }
         }
-
-
 
         public override void btnSave_Click(object sender, EventArgs e)
         {
@@ -42,27 +42,24 @@ namespace Billing_System.Model
                 return;
             }
 
-            if (editID == 0) // save
+            if (editID == 0) // Save new product
             {
                 MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Insert, editID);
                 guna2MessageDialog1.Show();
                 MainClass.Functions.ClearAll(this);
-
             }
-            else //update
+            else // Update existing product
             {
                 MainClass.Functions.AutoSQL(this, "tblProduct", MainClass.Functions.enmType.Update, editID);
                 guna2MessageDialog2.Show();
             }
+
             editID = 0;
             MainClass.Functions.ClearAll(this);
 
             // Clear the PictureBox after saving
             pImage.Image = null; // Or set to a default image
         }
-
-
-
 
         public override void btnDelete_Click(object sender, EventArgs e)
         {
@@ -80,12 +77,5 @@ namespace Billing_System.Model
                 pImage.Image = null; // Or reset to default image if needed
             }
         }
-
-
-
-
-
-
-
     }
 }
