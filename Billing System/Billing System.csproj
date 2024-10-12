@@ -153,6 +153,7 @@
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="SecurityFunctions.cs" />
     <Compile Include="View\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
