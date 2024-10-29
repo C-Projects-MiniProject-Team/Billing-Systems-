@@ -122,6 +122,12 @@
     <Compile Include="Model\frmProductAdd.Designer.cs">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmSaleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmSaleAdd.Designer.cs">
+      <DependentUpon>frmSaleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     </Compile>
     <Compile Include="View\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmUser.cs">
       <SubType>Form</SubType>

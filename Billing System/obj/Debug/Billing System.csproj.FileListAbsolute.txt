@@ -156,3 +156,51 @@ C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billi
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Billing System.exe.config
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Billing System.exe
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Billing System.pdb
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Bunifu.Licensing.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Guna.UI2.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\RestSharp.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Buffers.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Memory.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.dll
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\RestSharp.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Buffers.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Memory.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\uni\database project\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.xml
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.AssemblyReference.cache
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.SuggestedBindingRedirects.cache
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.exe.config
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLoading.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLogin.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmMain.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmProductAdd.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmUserAdd.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.Properties.Resources.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.Sample.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleAdd.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleView.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmProduct.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmUser.resources
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.GenerateResource.cache
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.CoreCompileInputs.cache
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
+D:\uni\database project\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb
