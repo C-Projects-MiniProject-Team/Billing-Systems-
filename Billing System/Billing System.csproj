@@ -55,6 +55,7 @@
     <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -122,6 +123,18 @@
     <Compile Include="Model\frmProductAdd.Designer.cs">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmPurchaseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmPurchaseAdd.Designer.cs">
+      <DependentUpon>frmPurchaseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmReceiptAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmReceiptAdd.Designer.cs">
+      <DependentUpon>frmReceiptAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +173,18 @@
     <Compile Include="View\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPurchase.Designer.cs">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmReceipts.Designer.cs">
+      <DependentUpon>frmReceipts.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductAdd.resx">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmPurchaseAdd.resx">
+      <DependentUpon>frmPurchaseAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmUserAdd.resx">
       <DependentUpon>frmUserAdd.cs</DependentUpon>
@@ -197,6 +225,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPurchase.resx">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmReceipts.resx">
+      <DependentUpon>frmReceipts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
