@@ -248,6 +248,7 @@
             this.btnRecipt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecipt.TextOffset = new System.Drawing.Point(10, 0);
             this.btnRecipt.UseTransparentBackground = true;
+            this.btnRecipt.Click += new System.EventHandler(this.btnRecipt_Click);
             // 
             // btnSale
             // 
@@ -312,6 +313,7 @@
             this.btnPurchase.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPurchase.TextOffset = new System.Drawing.Point(10, 0);
             this.btnPurchase.UseTransparentBackground = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // btnSupplier
             // 

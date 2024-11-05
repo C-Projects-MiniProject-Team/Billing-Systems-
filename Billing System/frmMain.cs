@@ -78,11 +78,29 @@ namespace Billing_System
             AddControls(new frmProduct());
         }
 
+        private void btnPur_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
         private void btnUser_Click(object sender, EventArgs e)
         {
             
             AddControls(new frmUser());
            
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmPurchase());
+
+
+        }
+
+        private void btnRecipt_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmReceipts());
         }
     }
 }

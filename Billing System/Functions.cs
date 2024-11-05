@@ -1,4 +1,5 @@
 ﻿using Billing_System;
+using Billing_System.Model;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace MainClass
 {
     class Functions
@@ -20,7 +22,7 @@ namespace MainClass
 
         //Creat Connection ------
         public static string MsgCaption = "Billing System"; // Add this if needed
-        public static string conString = "Data Source=LAHIRU\\SQLEXPRESS;Initial Catalog=BillingSystem;Integrated Security=True";
+        public static string conString = "Data Source=PMS-PC;Initial Catalog=BillingSystem;Integrated Security=True";
         public static SqlConnection con = new SqlConnection(conString);
 
 
@@ -860,9 +862,85 @@ namespace MainClass
         }
 
 
+        /* *********************************  Purchase Form Functions  ********************************* */
 
 
+        // Function to get DataTable for Purchase product search grid
+        public static DataTable GetTable_Purchases(string qry)
+        {
+            return GetDataTable(qry);
+        }
 
+        // Function to load existing  data for editing
+        public static void LoadForEdit2_Purchases(frmPurchaseAdd frmPurchaseAdd, string tableName, string qry, Guna2DataGridView dataGridView, int editID)
+        {
+            try
+            {
+                DataTable dt = GetDataTable(qry);
+                dataGridView.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data for edit: " + ex.Message, MsgCaption);
+            }
+        }
+
+
+        // Function to load data for the Purchase form
+        public static void LoadData_Purchases(string qry, Guna2DataGridView gv)
+        {
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand(qry, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    gv.DataSource = dt;
+
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading sales data: " + ex.Message);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        // Function to auto-generate serial numbers in purchase DataGridView
+        public static void SrNo_Purchases(Guna2DataGridView gv)
+        {
+            try
+            {
+                int count = 0;
+                foreach (DataGridViewRow row in gv.Rows)
+                {
+                    count++;
+                    row.Cells[0].Value = count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in SrNo_Sales: " + ex.Message, MsgCaption);
+            }
+        }
 
     }
 }
