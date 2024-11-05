@@ -156,3 +156,55 @@ C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billi
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
 C:\Users\PC\Desktop\Mini-Project\ProjectGithub\2024.10.12\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.AssemblyReference.cache
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.SuggestedBindingRedirects.cache
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.exe.config
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLoading.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmLogin.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.frmMain.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmCusAdd.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmProductAdd.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmSupAdd.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Model.frmUserAdd.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Properties.Resources.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.Sample.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleAdd.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.SampleView.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmCustomer.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmProduct.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmSupplier.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing_System.View.frmUser.resources
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.GenerateResource.cache
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.csproj.CoreCompileInputs.cache
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Billing System.exe.config
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Billing System.exe
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Billing System.pdb
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Bunifu.Licensing.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Guna.UI2.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\RestSharp.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Buffers.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Memory.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.dll
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\RestSharp.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Buffers.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.CodeDom.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Memory.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Text.Json.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\bin\Debug\System.ValueTuple.xml
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing .BB39E81F.Up2Date
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.exe
+C:\Users\Buddhi Sampath\Desktop\Mini Project C#\Billing-Systems-\Billing System\obj\Debug\Billing System.pdb

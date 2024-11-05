@@ -68,6 +68,7 @@
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CentralPannel.SuspendLayout();
             this.addNewPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -344,6 +345,7 @@
             this.btnSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSupplier.TextOffset = new System.Drawing.Point(10, 0);
             this.btnSupplier.UseTransparentBackground = true;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btnCustomer
             // 
@@ -376,6 +378,7 @@
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.TextOffset = new System.Drawing.Point(10, 0);
             this.btnCustomer.UseTransparentBackground = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnProduct
             // 
@@ -591,6 +594,7 @@
             this.CentralPannel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CentralPannel.Controls.Add(this.addNewPanel);
             this.CentralPannel.Location = new System.Drawing.Point(259, 109);
             this.CentralPannel.Name = "CentralPannel";
             this.CentralPannel.Size = new System.Drawing.Size(1233, 784);
@@ -609,7 +613,7 @@
             this.addNewPanel.Controls.Add(this.btnAddCur);
             this.addNewPanel.Controls.Add(this.btnAddPro);
             this.addNewPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(54)))));
-            this.addNewPanel.Location = new System.Drawing.Point(95, 208);
+            this.addNewPanel.Location = new System.Drawing.Point(52, 53);
             this.addNewPanel.Name = "addNewPanel";
             this.addNewPanel.Size = new System.Drawing.Size(511, 301);
             this.addNewPanel.TabIndex = 3;
@@ -795,7 +799,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 900);
-            this.Controls.Add(this.addNewPanel);
             this.Controls.Add(this.CentralPannel);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -809,6 +812,7 @@
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.CentralPannel.ResumeLayout(false);
             this.addNewPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

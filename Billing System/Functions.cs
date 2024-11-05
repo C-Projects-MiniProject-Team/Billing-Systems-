@@ -20,7 +20,7 @@ namespace MainClass
 
         //Creat Connection ------
         public static string MsgCaption = "Billing System"; // Add this if needed
-        public static string conString = "Data Source=LAHIRU\\SQLEXPRESS;Initial Catalog=BillingSystem;Integrated Security=True";
+        public static string conString = "Data Source=DESKTOP-TAHIKVG\\SQLEXPRESS09;Initial Catalog=BillingSystem;Integrated Security=True";
         public static SqlConnection con = new SqlConnection(conString);
 
 
@@ -858,6 +858,16 @@ namespace MainClass
                 }
             }
         }
+
+
+
+
+
+        //frm Customer-----------------------------------------------------------------
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using Billing_System.View;
+﻿
+using Billing_System.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace Billing_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -80,9 +81,19 @@ namespace Billing_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            
+
             AddControls(new frmUser());
-           
+
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmSupplier());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmCustomer());
         }
     }
 }
