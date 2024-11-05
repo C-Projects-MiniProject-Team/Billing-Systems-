@@ -84,5 +84,10 @@ namespace Billing_System
             AddControls(new frmUser());
            
         }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmSales());
+        }
     }
 }

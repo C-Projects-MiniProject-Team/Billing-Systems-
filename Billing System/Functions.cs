@@ -1,4 +1,5 @@
 ﻿using Billing_System;
+using Billing_System.Model;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
@@ -22,6 +23,7 @@ namespace MainClass
         public static string MsgCaption = "Billing System"; // Add this if needed
         public static string conString = "Data Source=LAHIRU\\SQLEXPRESS;Initial Catalog=BillingSystem;Integrated Security=True";
         public static SqlConnection con = new SqlConnection(conString);
+
 
 
         public static DataTable GetDataTable(string query)
@@ -112,7 +114,81 @@ namespace MainClass
 
 
 
+        //login validation------------------------------------------------------------
 
+        public static bool Validate(Form form)
+        {
+            bool isValid = true;
+
+            // පරණ validation labels අයින් කරන්න
+            var dynamicLabels = form.Controls.OfType<Label>()
+                                              .Where(c => c.Tag != null && c.Tag.ToString() == "remove")
+                                              .ToList();
+            foreach (var lbl in dynamicLabels)
+            {
+                form.Controls.Remove(lbl);
+            }
+
+            // සියලු TextBox වල value පරීක්ෂා කිරීම
+            foreach (Control control in form.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    // TextBox එක හිස් නම්
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        isValid = false;
+
+                        // "Required" කියන label එකක් යොදයි
+                        Label lblError = new Label
+                        {
+                            Text = "Required",
+                            ForeColor = Color.Red,
+                            Font = new Font("Segoe UI", 9, FontStyle.Regular),
+                            AutoSize = true,
+                            Tag = "remove"
+                        };
+
+                        // Label එක TextBox එකේ පහළින් පෙන්වයි
+                        lblError.Location = new Point(textBox.Location.X, textBox.Location.Y + textBox.Height + 2);
+                        form.Controls.Add(lblError);
+                    }
+                }
+            }
+
+            return isValid;
+        }
+
+
+
+
+
+
+
+
+        // Database එකෙන් username එකට අදාල encrypted password එක ලබාගැනීම
+        private static string GetEncryptedPassword(string username)
+        {
+            string encryptedPassword = null;
+            string query = "SELECT uPass FROM tblUser WHERE uName = @username";
+
+            using (SqlConnection con = new SqlConnection(conString))
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                try
+                {
+                    con.Open();
+                    encryptedPassword = cmd.ExecuteScalar() as string;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching password: " + ex.Message);
+                }
+            }
+
+            return encryptedPassword;
+        }
 
 
 
@@ -120,24 +196,23 @@ namespace MainClass
 
 
         //GetData
-        public static bool IsValidUser(string user, string pass)
+        // Username සහ Password validate කරන විධිය
+        public static bool IsValidUser(string username, string password)
         {
-            bool isValid = false;
+            // Database එකෙන් encrypted password එක ගන්න
+            string encryptedPassword = GetEncryptedPassword(username);
 
-            string qry = "Select * from tblUser where uUser ='" + user + "' and uPass = '" + pass + "' ";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
+            if (encryptedPassword == null)
             {
-                isValid = true;
+                return false; // Username එක database එකේ නැත්නම්
             }
 
-            return isValid;
-        }
+            // Encrypted password එක decrypt කර password එක සසඳන්න
+            string decryptedPassword = SecurityFunctions.DecryptPassword(encryptedPassword);
 
+            // User එකෙන් ලැබුණු password එක decrypt කරගත් password එක සමඟ සසඳන්න
+            return password == decryptedPassword;
+        }
 
 
 
@@ -861,6 +936,280 @@ namespace MainClass
 
 
 
+
+
+
+
+
+
+
+        //Sale----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+        // Format date in Guna2TextBox
+        // Add a static flag to prevent recursive calls
+        private static bool isUpdating = false;
+
+        public static void MaskD_Sales(Guna2TextBox textBox)
+        {
+            // Check if update is already in progress to prevent recursion
+            if (isUpdating)
+                return;
+
+            DateTime date;
+
+            // Temporarily set the flag to true to prevent recursion
+            isUpdating = true;
+
+            try
+            {
+                if (DateTime.TryParse(textBox.Text, out date))
+                {
+                    textBox.Text = date.ToString("MM/dd/yyyy"); // Format to MM/dd/yyyy
+                }
+            }
+            finally
+            {
+                // Reset the flag to allow future updates
+                isUpdating = false;
+            }
+        }
+
+        // Insert, update, delete operations for sales records in main and detail tables
+        public static void SQLAuto2_Sales(frmSaleAdd form, string mainTable, string detailTable, Guna2DataGridView dataGridView, int editID, enmType type)
+        {
+            SQLAutoSale_Sales(form, mainTable, detailTable, dataGridView, editID, type);
+        }
+
+        // Populate ComboBox with customer data
+        public static void CBFill_Sales(string qry, Guna2ComboBox personID)
+        {
+            try
+            {
+                // Load data asynchronously
+                DataTable dt = GetDataTable(qry);
+
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found for the ComboBox.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!dt.Columns.Contains("cName") || !dt.Columns.Contains("cusID"))
+                {
+                    MessageBox.Show("Expected columns 'cName' or 'cusID' not found in the query result.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                personID.Invoke((MethodInvoker)delegate
+                {
+                    personID.DataSource = dt;
+                    personID.DisplayMember = "cName";
+                    personID.ValueMember = "cusID";
+                    personID.SelectedIndex = -1; // Avoid auto-selecting the first item
+                });
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error in CBFill_Sales: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in CBFill_Sales: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Get DataTable for product list for sales product search grid
+        public static DataTable GetTable_Sales(string qry)
+        {
+            DataTable dt = GetDataTable(qry);
+            return dt;
+
+
+
+
+        }
+
+
+        // Load sales data for editing
+        public static void LoadForEdit2_Sales(frmSaleAdd frmSaleAdd, string tableName, string qry, Guna2DataGridView dataGridView, int editID)
+        {
+            try
+            {
+                DataTable dt = GetDataTable(qry);
+                dataGridView.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data for edit: " + ex.Message, "Error");
+            }
+        }
+
+        // Generate sequential numbers in sales DataGridView
+        public static void SrNo_Sales(Guna2DataGridView gv)
+        {
+            try
+            {
+                int count = 0;
+                foreach (DataGridViewRow row in gv.Rows)
+                {
+                    count++;
+                    row.Cells[0].Value = count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in SrNo_Sales: " + ex.Message, "Error");
+            }
+        }
+
+        // SQL operations for inserting or updating sales data in tblInvMain and tblInvDetail
+
+        private static readonly string connectionString = "Data Source=LAHIRU\\SQLEXPRESE;Initial Catalog=BillingSystem;Integrated Security=True";
+
+        public static void SQLAutoSale_Sales(frmSaleAdd frmSaleAdd, string mainTable, string detailTable, Guna2DataGridView dataGridView, int editID, enmType type)
+        {
+            try
+            {
+                Hashtable ht = new Hashtable();
+                string mainQry = "";
+
+                // Define the SQL query for insert or update based on the type
+                if (type == enmType.Insert)
+                {
+                    mainQry = $"INSERT INTO {mainTable} (PersonID, mdate, mDueDate, mType, pType, mTotal, Discount, NetAmount) VALUES (@PersonID, @mdate, @mDueDate, @mType, @pType, @mTotal, @Discount, @NetAmount)";
+                }
+                else if (type == enmType.Update)
+                {
+                    mainQry = $"UPDATE {mainTable} SET PersonID = @PersonID, mdate = @mdate, mDueDate = @mDueDate, mType = @mType, pType = @pType, mTotal = @mTotal, Discount = @Discount, NetAmount = @NetAmount WHERE mainID = @mainID";
+                    ht.Add("@mainID", editID);  // Add mainID for update
+                }
+
+                // Populate the hashtable with data from the form controls
+                foreach (Control c in frmSaleAdd.Controls)
+                {
+                    if (c is Guna2TextBox txt)
+                    {
+                        ht.Add("@" + txt.Name, txt.Text);
+                    }
+                    else if (c is Guna2ComboBox comboBox && comboBox.SelectedValue != null)
+                    {
+                        ht.Add("@" + comboBox.Name, comboBox.SelectedValue);
+
+                        // Explicitly add mType if the control's name is "mType"
+                        if (comboBox.Name == "mType")
+                        {
+                            ht["@mType"] = comboBox.SelectedValue;
+                        }
+                    }
+                }
+
+                // Execute the SQL query with parameters from the hashtable
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.OpenAsync(); // Open connection asynchronously
+                    using (SqlCommand cmd = new SqlCommand(mainQry, con))
+                    {
+                        // Add parameters to the SqlCommand from the Hashtable
+                        foreach (DictionaryEntry param in ht)
+                        {
+                            cmd.Parameters.AddWithValue(param.Key.ToString(), param.Value);
+                        }
+
+                        cmd.ExecuteNonQueryAsync(); // Execute the query asynchronously
+                    }
+                }
+
+                MessageBox.Show("Operation completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in SQLAutoSale_Sales: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // Automatic SQL operations for tblReceipt and tblPayment
+        public static void AutoSQL_Sales(frmSaleAdd frmSaleAdd, string tableName, enmType type, int editID)
+        {
+            try
+            {
+                Hashtable ht = new Hashtable();
+                string qry = "";
+
+                if (type == enmType.Insert)
+                {
+                    qry = $"INSERT INTO {tableName} (mainID, mdate, PersonID, description, NetAmount) VALUES (@mainID, @mdate, @PersonID, @description, @NetAmount)";
+                }
+                else if (type == enmType.Update && editID > 0)
+                {
+                    qry = $"UPDATE {tableName} SET mainID = @mainID, mdate = @mdate, PersonID = @PersonID, description = @description, NetAmount = @NetAmount WHERE payID = @payID";
+                    ht.Add("@payID", editID);
+                }
+
+                foreach (Control c in frmSaleAdd.Controls)
+                {
+                    if (c is Guna2TextBox txt)
+                    {
+                        ht.Add("@" + txt.Name, txt.Text);
+                    }
+                }
+
+                SQL(qry, ht);
+                MessageBox.Show("Sales operation completed successfully!", "Success");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in AutoSQL_Sales: " + ex.Message, "Error");
+            }
+        }
+
+        // Load data into a DataGridView
+        public static void LoadData_Sales(string qry, Guna2DataGridView gv)
+        {
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand(qry, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                gv.DataSource = dt.Rows.Count > 0 ? dt : throw new Exception("No data found.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading sales data: " + ex.Message, "Error");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        // Reset all controls in frmSaleAdd
+        public static void Reset_All_Sales(frmSaleAdd frmSaleAdd)
+        {
+            ClearAll(frmSaleAdd);
+        }
+
+        // Fetch the last inserted ID for reference in detail table
+        private static int GetLastInsertedID(string tableName)
+        {
+            int id = 0;
+            string qry = $"SELECT MAX(mainID) FROM {tableName}";
+            object result = GetFieldValue(qry);
+            int.TryParse(result.ToString(), out id);
+            return id;
+        }
 
 
 
