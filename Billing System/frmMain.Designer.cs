@@ -216,6 +216,7 @@
             this.btnPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayment.TextOffset = new System.Drawing.Point(10, 0);
             this.btnPayment.UseTransparentBackground = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnRecipt
             // 

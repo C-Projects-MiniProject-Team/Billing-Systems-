@@ -116,6 +116,12 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
+    <Compile Include="Model\frmPaymentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmPaymentAdd.Designer.cs">
+      <DependentUpon>frmPaymentAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmProductAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,12 @@
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
     <Compile Include="SecurityFunctions.cs" />
+    <Compile Include="View\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmPaymentAdd.resx">
+      <DependentUpon>frmPaymentAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductAdd.resx">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>

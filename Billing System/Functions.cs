@@ -112,7 +112,81 @@ namespace MainClass
 
 
 
+        //login validation------------------------------------------------------------
 
+        public static bool Validate(Form form)
+        {
+            bool isValid = true;
+
+            // පරණ validation labels අයින් කරන්න
+            var dynamicLabels = form.Controls.OfType<Label>()
+                                              .Where(c => c.Tag != null && c.Tag.ToString() == "remove")
+                                              .ToList();
+            foreach (var lbl in dynamicLabels)
+            {
+                form.Controls.Remove(lbl);
+            }
+
+            // සියලු TextBox වල value පරීක්ෂා කිරීම
+            foreach (Control control in form.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    // TextBox එක හිස් නම්
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        isValid = false;
+
+                        // "Required" කියන label එකක් යොදයි
+                        Label lblError = new Label
+                        {
+                            Text = "Required",
+                            ForeColor = Color.Red,
+                            Font = new Font("Segoe UI", 9, FontStyle.Regular),
+                            AutoSize = true,
+                            Tag = "remove"
+                        };
+
+                        // Label එක TextBox එකේ පහළින් පෙන්වයි
+                        lblError.Location = new Point(textBox.Location.X, textBox.Location.Y + textBox.Height + 2);
+                        form.Controls.Add(lblError);
+                    }
+                }
+            }
+
+            return isValid;
+        }
+
+
+
+
+
+
+
+
+        // Database එකෙන් username එකට අදාල encrypted password එක ලබාගැනීම
+        private static string GetEncryptedPassword(string username)
+        {
+            string encryptedPassword = null;
+            string query = "SELECT uPass FROM tblUser WHERE uName = @username";
+
+            using (SqlConnection con = new SqlConnection(conString))
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                try
+                {
+                    con.Open();
+                    encryptedPassword = cmd.ExecuteScalar() as string;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching password: " + ex.Message);
+                }
+            }
+
+            return encryptedPassword;
+        }
 
 
 
@@ -120,24 +194,23 @@ namespace MainClass
 
 
         //GetData
-        public static bool IsValidUser(string user, string pass)
+        // Username සහ Password validate කරන විධිය
+        public static bool IsValidUser(string username, string password)
         {
-            bool isValid = false;
+            // Database එකෙන් encrypted password එක ගන්න
+            string encryptedPassword = GetEncryptedPassword(username);
 
-            string qry = "Select * from tblUser where uUser ='" + user + "' and uPass = '" + pass + "' ";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
+            if (encryptedPassword == null)
             {
-                isValid = true;
+                return false; // Username එක database එකේ නැත්නම්
             }
 
-            return isValid;
-        }
+            // Encrypted password එක decrypt කර password එක සසඳන්න
+            string decryptedPassword = SecurityFunctions.DecryptPassword(encryptedPassword);
 
+            // User එකෙන් ලැබුණු password එක decrypt කරගත් password එක සමඟ සසඳන්න
+            return password == decryptedPassword;
+        }
 
 
 
@@ -860,6 +933,33 @@ namespace MainClass
         }
 
 
+
+        //Payment -----------------------------------------------------------------
+
+        public static void LoadData_Payment(string qry, DataGridView gv)
+        {
+            // Set Serial Number Column in GridView
+            gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conString))
+                {
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Set the DataSource of DataGridView
+                    gv.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading payment data: " + ex.Message);
+            }
+        }
 
 
 

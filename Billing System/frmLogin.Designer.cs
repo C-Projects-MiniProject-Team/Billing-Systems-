@@ -35,8 +35,8 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.enterBoxPassowrd = new Guna.UI2.WinForms.Guna2TextBox();
-            this.enterBoxName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@
             this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.guna2ToggleSwitch1);
-            this.guna2Panel1.Controls.Add(this.enterBoxPassowrd);
-            this.guna2Panel1.Controls.Add(this.enterBoxName);
+            this.guna2Panel1.Controls.Add(this.txtPass);
+            this.guna2Panel1.Controls.Add(this.txtUser);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
@@ -141,68 +141,71 @@
             this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
-            // enterBoxPassowrd
+            // txtPass
             // 
-            this.enterBoxPassowrd.BorderColor = System.Drawing.Color.DarkViolet;
-            this.enterBoxPassowrd.BorderRadius = 9;
-            this.enterBoxPassowrd.BorderThickness = 2;
-            this.enterBoxPassowrd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.enterBoxPassowrd.DefaultText = "";
-            this.enterBoxPassowrd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.enterBoxPassowrd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.enterBoxPassowrd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.enterBoxPassowrd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.enterBoxPassowrd.FillColor = System.Drawing.Color.Transparent;
-            this.enterBoxPassowrd.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
-            this.enterBoxPassowrd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.enterBoxPassowrd.ForeColor = System.Drawing.Color.DarkViolet;
-            this.enterBoxPassowrd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.enterBoxPassowrd.Location = new System.Drawing.Point(65, 284);
-            this.enterBoxPassowrd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.enterBoxPassowrd.Name = "enterBoxPassowrd";
-            this.enterBoxPassowrd.PasswordChar = '\0';
-            this.enterBoxPassowrd.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.enterBoxPassowrd.PlaceholderText = "Passowrd";
-            this.enterBoxPassowrd.SelectedText = "";
-            this.enterBoxPassowrd.Size = new System.Drawing.Size(286, 65);
-            this.enterBoxPassowrd.TabIndex = 2;
-            this.enterBoxPassowrd.TabStop = false;
+            this.txtPass.BorderColor = System.Drawing.Color.DarkViolet;
+            this.txtPass.BorderRadius = 9;
+            this.txtPass.BorderThickness = 2;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.DefaultText = "";
+            this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.FillColor = System.Drawing.Color.Transparent;
+            this.txtPass.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtPass.ForeColor = System.Drawing.Color.DarkViolet;
+            this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPass.Location = new System.Drawing.Point(65, 284);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPass.PlaceholderText = "Passowrd";
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(286, 65);
+            this.txtPass.TabIndex = 2;
+            this.txtPass.TabStop = false;
+            this.txtPass.Tag = "v";
             // 
-            // enterBoxName
+            // txtUser
             // 
-            this.enterBoxName.BorderColor = System.Drawing.Color.DarkViolet;
-            this.enterBoxName.BorderRadius = 9;
-            this.enterBoxName.BorderThickness = 2;
-            this.enterBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.enterBoxName.DefaultText = "";
-            this.enterBoxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.enterBoxName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.enterBoxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.enterBoxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.enterBoxName.FillColor = System.Drawing.Color.Transparent;
-            this.enterBoxName.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
-            this.enterBoxName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.enterBoxName.ForeColor = System.Drawing.Color.DarkViolet;
-            this.enterBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.enterBoxName.Location = new System.Drawing.Point(65, 182);
-            this.enterBoxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.enterBoxName.Name = "enterBoxName";
-            this.enterBoxName.PasswordChar = '\0';
-            this.enterBoxName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.enterBoxName.PlaceholderText = "User Name";
-            this.enterBoxName.SelectedText = "";
-            this.enterBoxName.Size = new System.Drawing.Size(286, 65);
-            this.enterBoxName.TabIndex = 2;
-            this.enterBoxName.TabStop = false;
+            this.txtUser.BorderColor = System.Drawing.Color.DarkViolet;
+            this.txtUser.BorderRadius = 9;
+            this.txtUser.BorderThickness = 2;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FillColor = System.Drawing.Color.Transparent;
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtUser.ForeColor = System.Drawing.Color.DarkViolet;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Location = new System.Drawing.Point(65, 182);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
+            this.txtUser.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtUser.PlaceholderText = "User Name";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(286, 65);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.TabStop = false;
+            this.txtUser.Tag = "v";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(51, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(358, 80);
+            this.label3.Size = new System.Drawing.Size(381, 69);
             this.label3.TabIndex = 4;
             this.label3.Text = "WELLCOME";
             // 
@@ -294,11 +297,11 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox enterBoxName;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2TextBox enterBoxPassowrd;
+        private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnCloseLogin;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;

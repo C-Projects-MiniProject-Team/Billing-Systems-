@@ -19,7 +19,8 @@ namespace Billing_System
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            // Set the password field to hide text initially
+            txtPass.UseSystemPasswordChar = true;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -34,33 +35,46 @@ namespace Billing_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //show the frmMain form condition are user name : admin and password : admin123 equal not quilie then show the error message visibale fale true labele InvlidN and InvalidPd
-            //if (enterBoxName.Text == "admin" && enterBoxPassowrd.Text == "admin123")
-            //{
-            //    frmMain obj = new frmMain();
-            //    this.Hide();
-            //    obj.Show();
-            //}
-            //else
-            //{
-            //    InvlidN.Visible = true;
-            //    InvalidPd.Visible = true;
-               
-            //    //font color red
-            //    InvlidN.ForeColor = Color.Red;
-            //    InvalidPd.ForeColor = Color.Red;
+            string username = txtUser.Text;
+            string password = txtPass.Text;
 
-            //    //and border color red
-               
-            //    enterBoxName.BorderColor = Color.Red;
-            //    enterBoxPassowrd.BorderColor = Color.Red;
+            // Validate fields first
+            if (MainClass.Functions.Validate(this) == false)
+            {
+                return;
+            }
+
+            // Username සහ password validate කිරීම
+            if (MainClass.Functions.IsValidUser(username, password))
+            {
+                // Login සාර්ථකයි නම් frmMain form එක විවෘත කරන්න
+                new frmMain().Show();
+                this.Hide();
+            }
+            else
+            {
+                InvlidN.Visible = true;
+                InvalidPd.Visible = true;
+
+                //font color red
+                InvlidN.ForeColor = Color.Red;
+                InvalidPd.ForeColor = Color.Red;
+
+                //and border color red
+
+                txtUser.BorderColor = Color.Red;
+                txtPass.BorderColor = Color.Red;
+                // Login අසාර්ථක නම් error message එක පෙන්වන්න
+                MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
+        }
 
-            //}
-
-
-
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Toggle password visibility
+            txtPass.UseSystemPasswordChar = !guna2ToggleSwitch1.Checked;
         }
     }
 }
